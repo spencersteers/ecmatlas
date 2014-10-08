@@ -1,3 +1,3 @@
-# ECM ATlas - 2013
+# ECM Atlas - 2013
 
 Last years project
