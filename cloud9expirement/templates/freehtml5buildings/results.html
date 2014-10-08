@@ -1,0 +1,93 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+    {% block menubar %}
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="current"><a href="advanceSearch.html">Advanced Search</a></li>
+          <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li>
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+      </div><!--close menubar-->	
+    </nav>	
+    {% endblock %}
+
+{% block content %}
+    <div id="content_item">
+        <h1 class="pageHeader" style="text-align:center; margin-bottom:20px;">Search Results</h1>
+    </div>
+
+    {% if found_experiments %}
+    <p class="searchResultsParagraph"> We found {{found_experiments.count}} datasets matching your search. </p>
+    <p class="searchResultsParagraph"> Select an experiment(s) to investigate further. </p>
+    
+    <form method="post" action="results2.html">
+    {% csrf_token %}
+        <div class="resultsOutput" >
+            <h class="sectionHeader">Output</h>
+            <p>
+            <input type="radio" name="choice" value="Html" checked> HTML <br>
+            <input type="radio" name="choice" value="CSV"> CSV <br>
+            Note: If more than 3 experiments are selected. The output will default to
+            CSV.
+            </p>
+            <h class="sectionHeader" >Read-Out</h>
+            <p>
+            <input type="radio" name="choice2" value="Matches">Peptide Identifications<br>
+            <input type="radio" name="choice2" value="NormalizeID" checked>Normalized Peptide Identificaitons <br>
+            </p>
+        </div>  
+        
+        <div class="datagrid" style="margin-top:10px;width:100%;">
+			<table class="datagrid">
+				<thead>
+					<tr>
+					    <th>Select</th>
+					    <th>Unique Identifier</th>
+					    <th>User</th>
+						<th>Link</th>
+						<th>Tissue Type</th>
+						<th>Database</th>
+                        <th>Organ</th>
+					</tr>
+				</thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="checkbox" name="Selection" value= "All" > </td>
+                        <td> all </td>
+                        <td> all </td>
+                        <td> all </td>
+                        <td> all </td>
+                        <td> all </td>
+                        <td> all </td>
+                    </tr>
+                    {% for exp in found_experiments %}
+                        <tr>
+                            <td> <input type="checkbox" name="Selection" value="{{ exp.id }}"></td>
+                            <td> {{exp}} </td>
+                            <td> {{ exp.User }} </td>
+                            <td> <a href= "{{exp.ReportURI}}" > ref </a></td>
+                            <td> {{ exp.TissueType }}</td>
+                            <td> {{ exp.Database }} </td>
+                            <td> {{ exp.Tissue }} </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <button style="margin-top:120px;" type="submit" class="exploreButton"> Submit</button> 
+    </form>
+    {% else %}
+        <p class="searchResultsParagraph"> No datasets were found that match your criteria. </p>
+    {% endif %}
+    
+{% endblock %}

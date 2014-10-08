@@ -1,0 +1,24 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+<title>{% block title %}protein{% endblock %}</title>
+
+{% block content %}
+    <div class="datagrid">
+        <table class="datagrid">
+            <thead>
+                <tr>
+                    <th>Experiments</th>
+                </tr>         
+            </thead>
+            <tbody>
+                {% for exp in found_exp %}
+                    <tr>
+                        <td><a href="{% url 'experiment' exp.id %}">{{exp.SearchTitle}}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}

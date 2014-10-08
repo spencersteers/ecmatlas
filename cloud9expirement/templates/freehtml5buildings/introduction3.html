@@ -1,0 +1,56 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li class="current">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li >
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+    <!--close menubar-->
+</nav>
+{% endblock %} 
+
+
+{% block content %}
+    <div class="content_item">
+        <h1 class="pageHeader">ECMAtlas, An Introduction...</h1>
+    </div>
+    
+    <div class="columnContainer"> 
+
+        <div class="EMC-explore-column">
+            <div class="exploreQuarterCompartment">
+                <p class="ratIntroductionParagraph" style="padding-top:0px;">ECM Atlas is a resource for the scientific community to facilitate discoveries in matrix biology.<br><br>The site hosts a curated repository of mass spectrometry derived data from a diverse range of tissues, biofluids or cell cultures that contain ECM proteins.<br><br>Findings in this area of research are likely to provide paradigm shifts in our understanding of diseases and the types of proteins considered for therapeutic targeting, and as sources of diagnostic markers.</p>
+            </div>
+        </div>
+        
+        <div class="EMC-explore-column">
+            {% if form_data.Species == "Homo Sapiens" %}
+                <img class="EMC-human-image" src={% static "images/vitruvian-man.png" %} />
+            {% elif form_data.Species == "Rattus" %}
+                <img class="EMC-rat-image-tall" src={% static "images/rat.png" %} />
+            {% endif %}
+            <form action="tissues.html" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="Species" value="{{ form_data.Species }}" />
+                <div class="EMC-padding-10"></div>
+                <button class="exploreButton">Investigate Further</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

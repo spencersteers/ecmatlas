@@ -1,0 +1,33 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+{% block title %}File Upload and List{% endblock %}
+
+{% block menubar %}
+<nav>
+  <div id="menubar">
+    <ul id="nav">
+      <li><a href="../index.html">To Homepage</a></li>
+      <li><a href="../datainput.html">Data Input Home</a></li>
+      <li><a href="../admin/">Admin Page</a></li>
+      <li><a href="../list/">File Upload / Re-Parse a file </a></li>
+      <li class="current"><a href="../validate/">Validation</a></li>
+    </ul>
+  </div><!--close menubar-->	
+</nav>	
+{% endblock %}
+    
+{% block content %}
+
+<form action="" method="post" class="EMC-upate-forum">
+
+    {% csrf_token %}
+
+    <p>Validation errors appear above the field that needs correction</p>
+
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+
+</form>
+
+{% endblock %}

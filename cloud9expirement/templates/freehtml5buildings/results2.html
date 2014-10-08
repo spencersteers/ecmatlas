@@ -1,0 +1,50 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+    {% block menubar %}
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+           <li><a href="index.html">Home</a></li>
+          <li><a href="advanceSearch.html">New Search</a></li>
+          <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li>
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+      </div><!--close menubar-->	
+    </nav>	
+    {% endblock %}
+
+{% block content %}
+    {% if experiments %}
+        <div class="datagrid" style="margin-top:20px;">
+    		<table class="datagrid">
+    			<thead>
+    				<tr>
+    				    <th>Gene Name</th>
+                        {% for exp in experiments %}
+                            <th> {{ exp.SearchTitle }} </td>
+                        {% endfor %}    
+    				</tr>
+    			</thead>
+                <tbody>
+                {% for row in NormID %}
+                <tr>
+                    {% for item in row %}
+                    <td> {{ item }} </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="searchResultsParagraph"> Sorry, you must select at least one dataset. </p>
+    {% endif %}
+{% endblock %}

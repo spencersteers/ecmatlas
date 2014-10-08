@@ -1,0 +1,92 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %} 
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li class="current">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li >
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+    <!--close menubar-->
+</nav>{% endblock %} 
+
+{% block content %}
+<div class="content_item">
+    <h1 class="pageHeader">Select ECM Proteins To Explore</h1>
+</div>
+<div class="columnContainer">
+
+    <form action="readout_and_output.html" method="post">
+
+        {% csrf_token %}
+
+        <input type="hidden" name="Species" value="{{ form_data.Species }}" />
+
+        {% for tissue in form_data.Tissues %}
+            <input type="hidden" name="Tissues" value="{{ tissue }}" />
+        {% endfor %}
+
+        {% for extype in form_data.ExperimentType %}
+            <input type="hidden" name="ExperimentType" value="{{ extype }}" />
+        {% endfor %}
+
+        <div class="EMC-explore-column">
+    
+                <fieldset class="ECM-form-fieldset-radio">
+
+                    <legend>ECM Proteins</legend>
+
+                    <label for="glycolproteins">
+                        <input type="checkbox" name="GeneType" value="ECM Glycoproteins"> Glycoproteins
+                    </label>
+                    <p class="descriptionParagraph"><a href="http://en.wikipedia.org/wiki/GlycoproteinsGlycoproteins">GlycoProteins</a>  are proteins that contain glycans (oligosaccharide chains).</p>
+                   <!-- <label for="fiberComponents">
+                        <input type="checkbox" name="GeneType" value="Fiber Components"> Fiber Components
+                    </label>-->
+                    <label for="collagens">
+                        <input type="checkbox" name="GeneType" value="Collagens"> Collagens
+                    </label>
+                    <p class="descriptionParagraph"><a href="http://en.wikipedia.org/wiki/Collagen">Collagens</a> are reported to be the most abundant class of proteins in the human body. Many collagens have the ability to form long extended fibers (much like braids of wire to form cables).</p>
+                    <label for="proteoglycans">
+                        <input type="checkbox" name="GeneType" value="Proteoglycans"> Proteoglycans
+                    </label>
+                    <p class="descriptionParagraph"><a href="http://en.wikipedia.org/wiki/Proteoglycan">Proteoglycans</a> are proteins that have a very large amount of glycosylation (specifically glycosaminoglycan (GAG) chains). Often more than 50% of the total protein mass is from GAG chains.</p>
+                   <!-- <label for="basementMembrane">
+                        <input type="checkbox" name="GeneType" value="Basement Membrane"> Basement Membrane
+                    </label>
+                    <p class="descriptionParagraph">Are the specialized ECM proteins that surrounds cells.</p>-->
+
+                </fieldset>
+
+           
+        </div>
+
+        <div class="EMC-explore-column">
+
+            {% if form_data.Species == "Homo Sapiens" %}
+                <img class="EMC-human-image" src={% static "images/vitruvian-man.png" %} />
+            {% elif form_data.Species == "Rattus" %}
+                <img class="EMC-rat-image-tall" src={% static "images/rat.png" %} />
+            {% endif %}
+            <div class="EMC-padding-10"></div>
+            <button type="submit" class="exploreButton">Finish Up</button>
+
+        </div>
+
+    </form>
+
+</div>
+{% endblock %}

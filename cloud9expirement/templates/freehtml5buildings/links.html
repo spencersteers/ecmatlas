@@ -1,0 +1,56 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li >
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li>
+                <a href="methods.html">Methods</a>
+            </li>
+            <li class="current">
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %} 
+
+
+{% block content %}
+<div class="content_item">
+    <h1 class="pageHeader">Useful Resources</h1>
+</div>
+
+<div class="linksSingleMiddleColumn" >
+
+<p class="linksParagraph"><a href="http://www.lm.lncc.br/">Lamanin Database</a></p>
+<p class="linksDescriptionParagraph">A database focusing on a non-collagneous extracellular matrix protein family, the LMs.<br>This site provides a tool to retrieve high-throughput and curated data for studies on lamanin.</p>
+<p class="linksParagraph"><a href="http://www.exocarta.org/">Exocarta</a></p>
+<p class="linksDescriptionParagraph">Exosome protein, RNA, and lipid database.</p>
+<p class="linksParagraph"><a href="http://matrixdb.ibcp.fr/index.html">MatrixDB</a></p>
+<p class="linksDescriptionParagraph">A database focused on interactions established by extracellular proteins and polysaccharides.</p>
+<p class="linksParagraph"><a href=" http://collagen.stanford.edu/">COLdb</a></p>
+<p class="linksDescriptionParagraph">A database linking genetic data to molecular function in fibrilla collagens.</p>
+<p class="linksParagraph"><a href=" http://gpmdb.thegpm.org/">GPMDB</a></p>
+<p class="linksDescriptionParagraph">Repository of mass spectrometry based peptide identifications.</p>
+<p class="linksParagraph"><a href="http://www.peptideatlas.org/">Peptide Atlas</a></p>
+<p class="linksDescriptionParagraph">Repository of mass spectrometry based peptide identifications.</p>
+<p class="linksParagraph"><a href="http://web.mit.edu/hyneslab/matrisome/  ">The Matrisome Project</a></p>
+<p class="linksDescriptionParagraph">Theoretical database of ECM proteins and associated proteins, now with experimental evidence for proteins.</p>
+<p class="linksParagraph"><a href=" http://www.proteinatlas.org/">The Human Protein Atlas</a></p>
+<p class="linksDescriptionParagraph">Exploration of the human proteome using antibody-based proteomics.</p>
+<p class="linksParagraph"><a href="http://string-db.org/">String DB</a></p>
+<p class="linksDescriptionParagraph">Known and predicted protein-protein interactions.</p>
+    
+
+</div>
+{% endblock %}

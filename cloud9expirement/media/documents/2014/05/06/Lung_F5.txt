@@ -1,0 +1,278 @@
+Header	--------------------------------------------------------									
+										
+Search title	Organ Analysis Lung F5									
+Timestamp	2013-01-31T23:46:57Z									
+User	Ryan									
+Email										
+Report URI	http://hsc-mascot2/mascot/cgi/master_results.pl?file=E:/mascot/data/20130131/F065045.dat									
+Peak list data path	C:\Users\msf_admin\Documents\RyanH\Organ Analysis 201212\Lung\20121218_Lung_Frac5_Run01_ITMSms2cid.txt									
+Peak list format	Mascot generic									
+Search type	MIS									
+Mascot version	2.4.1									
+Database	IPI_HumanMouse									
+Fasta file	IPI_HumanMouse_Annot.FASTA									
+Total sequences	150131									
+Total residues	62755156									
+Sequences after taxonomy filter	150131									
+Number of queries	3984									
+										
+Decoy	--------------------------------------------------------									
+										
+Number of matches above identity threshold in search of real database	781									
+Number of matches above identity threshold in search of decoy database	25									
+Number of matches above homology threshold in search of real database	1047									
+Number of matches above homology threshold in search of decoy database	46									
+										
+Fixed modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss							
+1	Carbamidomethyl (C)	57.021464								
+										
+Variable modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss(es)							
+1	Acetyl (Protein N-term)	42.010565								
+2	Gln->pyro-Glu (N-term Q)	-17.026549								
+3	Oxidation (M)	15.994915	0	63.998285						
+4	Oxidation (P)	15.994915								
+										
+Search Parameters	--------------------------------------------------------									
+										
+Taxonomy filter	All entries									
+Enzyme	Trypsin									
+Maximum Missed Cleavages	1									
+Fixed modifications	Carbamidomethyl (C)									
+Variable modifications	"Acetyl (Protein N-term),Gln->pyro-Glu (N-term Q),Oxidation (M),Oxidation (P)"									
+Peptide Mass Tolerance	15									
+Peptide Mass Tolerance Units	ppm									
+Fragment Mass Tolerance	0.6									
+Fragment Mass Tolerance Units	Da									
+Mass values	Monoisotopic									
+Instrument type	Default									
+Isotope error mode	1									
+Decoy database also searched	1									
+										
+Format parameters	--------------------------------------------------------									
+										
+Significance threshold	0.05									
+Max. number of hits	0									
+Use MudPIT protein scoring	1									
+Ions score cut-off	0									
+Include same-set proteins	0									
+Include sub-set proteins	0									
+Include unassigned	0									
+Require bold red	1									
+Use homology threshold	1									
+Group protein families	0									
+Re-score using Percolator	0									
+										
+Protein hits	--------------------------------------------------------									
+										
+prot_hit_num	prot_acc	prot_desc	prot_score	prot_mass	prot_matches	prot_matches_sig	prot_sequences	prot_sequences_sig	prot_cover	prot_len
+1	IPI00329872	Tax_Id=10090 Gene_Symbol=Col1a1 Isoform 1 of Collagen alpha-1(I) chain	3730	138974	207	147	50	39	55.3	1453
+										
+2	IPI00222188	Tax_Id=10090 Gene_Symbol=Col1a2 Collagen alpha-2(I) chain	2350	129992	133	90	43	31	53.2	1372
+										
+3	IPI00129571	Tax_Id=10090 Gene_Symbol=Col3a1 Collagen alpha-1(III) chain	2262	140112	180	116	49	39	46.6	1464
+										
+4	IPI00986243	Tax_Id=10090 Gene_Symbol=Col6a3 collagen alpha-3(VI) chain isoform 4	2258	331848	120	89	50	40	23.1	3062
+										
+5	IPI00338452	Tax_Id=10090 Gene_Symbol=Col4a2 Collagen alpha-2(IV) chain	1503	168417	81	56	28	17	29.1	1707
+										
+6	IPI00515360	Tax_Id=10090 Gene_Symbol=Hspg2 basement membrane-specific heparan sulfate proteoglycan core protein	1447	480207	116	76	48	37	15.4	4383
+										
+7	IPI00297646	Tax_Id=9606 Gene_Symbol=COL1A1 Collagen alpha-1(I) chain	1389	139883	119	73	34	21	40	1464
+										
+8	IPI00116913	Tax_Id=10090 Gene_Symbol=Lama5 Laminin subunit alpha-5	1222	416165	75	47	36	25	15.5	3718
+										
+9	IPI00119065	Tax_Id=10090 Gene_Symbol=Lamb2 Laminin subunit beta-2	800	203579	40	29	19	14	14.9	1799
+										
+10	IPI00400016	Tax_Id=10090 Gene_Symbol=Lamc1 Laminin subunit gamma-1	677	182830	33	21	15	12	14.3	1607
+										
+11	IPI00227299	Tax_Id=10090 Gene_Symbol=Vim Vimentin	643	53712	41	31	18	14	48.1	466
+										
+12	IPI00220327	"Tax_Id=9606 Gene_Symbol=KRT1 Keratin, type II cytoskeletal 1"	636	66170	26	21	12	10	23.8	644
+										
+13	IPI00134505	Tax_Id=10090 Gene_Symbol=Eln Elastin	565	72008	31	19	8	6	28.5	860
+										
+14	IPI00298281	Tax_Id=9606 Gene_Symbol=LAMC1 Laminin subunit gamma-1	520	183191	17	12	8	6	6.4	1609
+										
+15	IPI00021033	Tax_Id=9606 Gene_Symbol=COL3A1 Isoform 1 of Collagen alpha-1(III) chain	505	139733	63	31	23	12	22.4	1466
+										
+16	IPI00109588	Tax_Id=10090 Gene_Symbol=Col4a1 Collagen alpha-1(IV) chain	475	161719	58	18	22	5	27.7	1669
+										
+17	IPI01008574	Tax_Id=10090 Gene_Symbol=Lama3 laminin subunit alpha-3	429	375058	31	18	21	11	8.9	3330
+										
+18	IPI00338604	"Tax_Id=10090 Gene_Symbol=Myh10 Myosin, heavy polypeptide 10, non-muscle"	357	233298	25	18	13	11	9.8	2007
+										
+19	IPI00124689	Tax_Id=10090 Gene_Symbol=Npnt Isoform 4 of Nephronectin	330	69242	19	16	5	3	8.9	609
+										
+20	IPI00024284	Tax_Id=9606 Gene_Symbol=HSPG2 Basement membrane-specific heparan sulfate proteoglycan core protein	296	479253	31	18	14	8	3.4	4391
+										
+21	IPI00974712	Tax_Id=10090 Gene_Symbol=- Fn1 protein	288	253790	20	15	11	8	7.4	2271
+										
+22	IPI00120761	Tax_Id=10090 Gene_Symbol=Slc4a1 Isoform Erythrocyte of Band 3 anion transport protein	250	103412	28	13	12	8	15.1	929
+										
+23	IPI00115564	Tax_Id=10090 Gene_Symbol=Slc25a4 ADP/ATP translocase 1	241	33111	16	10	8	4	29.2	298
+										
+24	IPI00009865	"Tax_Id=9606 Gene_Symbol=KRT10 Keratin, type I cytoskeletal 10"	236	59020	19	13	9	7	18.5	584
+										
+25	IPI01008141	Tax_Id=10090 Gene_Symbol=Plec Isoform PLEC-1I of Plectin	212	519050	22	10	15	7	4.2	4544
+										
+26	IPI00380136	Tax_Id=10090 Gene_Symbol=Loxl1 Lysyl oxidase homolog 1	200	67149	16	7	6	3	15	607
+										
+27	IPI00743696	Tax_Id=9606 Gene_Symbol=COL4A1 Isoform 1 of Collagen alpha-1(IV) chain	198	161654	32	8	13	3	17.4	1669
+										
+28	IPI00626353	Tax_Id=10090 Gene_Symbol=Col4a4 Isoform 1 of Collagen alpha-4(IV) chain	194	166046	39	7	19	4	20.5	1682
+										
+29	IPI00021304	"Tax_Id=9606 Gene_Symbol=KRT2 Keratin, type II cytoskeletal 2 epidermal"	188	66110	6	6	4	4	6.4	645
+										
+30	IPI00001597	Tax_Id=9606 Gene_Symbol=LOXL1 Lysyl oxidase homolog 1	183	63755	11	4	5	2	13.2	574
+										
+31	IPI00331214	Tax_Id=10090 Gene_Symbol=Cd36 Platelet glycoprotein 4	178	53234	10	7	5	4	17.8	472
+										
+32	IPI00115516	Tax_Id=10090 Gene_Symbol=Emilin1 EMILIN-1	168	108830	7	3	5	2	12	1017
+										
+33	IPI00112947	"Tax_Id=10090 Gene_Symbol=Krt19 Keratin, type I cytoskeletal 19"	164	44515	10	7	6	4	18.4	403
+										
+34	IPI00328113	Tax_Id=9606 Gene_Symbol=FBN1 Fibrillin-1	156	332664	12	9	6	5	2.2	2871
+										
+35	IPI00117093	Tax_Id=10090 Gene_Symbol=Lamb3 Laminin subunit beta-3	139	132694	11	6	7	4	8.4	1168
+										
+36	IPI00117977	Tax_Id=10090 Gene_Symbol=Sftpb Pulmonary surfactant-associated protein B	138	43183	6	5	3	3	8.2	377
+										
+37	IPI00126365	Tax_Id=10090 Gene_Symbol=Prg2 Bone marrow proteoglycan	133	24981	4	3	2	2	14.3	223
+										
+38	IPI00020501	Tax_Id=9606 Gene_Symbol=MYH11 Myosin-11	132	228054	7	6	5	4	3.1	1972
+										
+39	IPI00988354	Tax_Id=10090 Gene_Symbol=Lama3 Uncharacterized protein	124	192771	11	6	9	4	6.5	1724
+										
+40	IPI00294615	Tax_Id=9606 Gene_Symbol=FBLN5 Fibulin-5	122	52485	12	8	4	2	7.4	448
+										
+41	IPI00186460	Tax_Id=9606 Gene_Symbol=COL2A1 Isoform 1 of Collagen alpha-1(II) chain	121	134820	43	10	17	4	28.6	1418
+										
+42	IPI00407339	Tax_Id=10090 Gene_Symbol=Hist1h4c;Hist1h4i;Hist1h4d;Hist1h4j;Hist1h4m;Hist1h4h;Hist1h4k;Hist1h4b;Hist4h4;Hist1h4a;Hist1h4f;Hist2h4;Hist1h4n Histone H4	120	11360	4	3	2	2	19.4	103
+										
+43	IPI00117829	Tax_Id=10090 Gene_Symbol=Cav1 Isoform Alpha of Caveolin-1	114	20697	13	5	6	3	36	178
+										
+44	IPI00473320	"Tax_Id=10090 Gene_Symbol=Actb Putative actin, beta"	108	42115	9	4	5	2	16.3	374
+										
+45	IPI00471183	Tax_Id=10090 Gene_Symbol=Col2a1 Isoform 2 of Collagen alpha-1(II) chain	106	140108	28	9	13	3	19	1458
+										
+46	IPI00115522	"Tax_Id=10090 Gene_Symbol=Fga fibrinogen, alpha polypeptide isoform 2"	105	61801	6	3	4	2	8.6	557
+										
+47	IPI00226218	Tax_Id=10090 Gene_Symbol=Mettl7a1 methyltransferase like 7A1	103	28648	6	3	2	2	13.5	244
+										
+48	IPI00120870	Tax_Id=10090 Gene_Symbol=Postn Isoform 2 of Periostin	101	90882	7	2	4	1	9.4	811
+										
+49	IPI00137938	Tax_Id=10090 Gene_Symbol=Col4a3 Collagen alpha-3(IV) chain	100	163278	24	7	16	4	17	1669
+										
+50	IPI00126861	Tax_Id=10090 Gene_Symbol=Tgm2 Protein-glutamine gamma-glutamyltransferase 2	99	78153	7	4	4	2	8.7	686
+										
+51	IPI00406377	"Tax_Id=10090 Gene_Symbol=Krt7 Keratin, type II cytoskeletal 7"	96	50678	5	2	3	1	8.8	457
+										
+52	IPI00019502	Tax_Id=9606 Gene_Symbol=MYH9 Isoform 1 of Myosin-9	91	227646	11	7	6	5	4.5	1960
+										
+53	IPI00019359	"Tax_Id=9606 Gene_Symbol=KRT9 Keratin, type I cytoskeletal 9"	85	62255	8	4	5	2	13.2	623
+										
+54	IPI00111793	Tax_Id=10090 Gene_Symbol=Nid1 Nidogen-1	83	139302	7	2	5	1	6.3	1245
+										
+55	IPI00339885	Tax_Id=10090 Gene_Symbol=Col6a1 Collagen alpha-1(VI) chain	80	109562	7	2	4	1	5.2	1025
+										
+56	IPI00102685	Tax_Id=9606 Gene_Symbol=MYADM Myeloid-associated differentiation marker	80	36049	2	2	1	1	3.1	322
+										
+57	IPI00124771	"Tax_Id=10090 Gene_Symbol=Slc25a3 Phosphate carrier protein, mitochondrial"	70	40063	5	4	3	2	14	357
+										
+58	IPI00461861	Tax_Id=10090 Gene_Symbol=Mme Neprilysin	66	86332	4	3	3	2	6.1	750
+										
+59	IPI00230065	Tax_Id=10090 Gene_Symbol=Col11a1 Isoform Short of Collagen alpha-1(XI) chain	63	171923	15	2	13	1	18.7	1719
+										
+60	IPI00844090	Tax_Id=9606 Gene_Symbol=COL5A1 Collagen alpha-1(V) chain	63	184131	9	2	7	1	9.8	1838
+										
+61	IPI00011283	Tax_Id=9606 Gene_Symbol=COL11A2 Isoform 1 of Collagen alpha-2(XI) chain	63	172468	8	2	6	1	6.3	1736
+										
+62	IPI00399464	Tax_Id=10090 Gene_Symbol=Col8a1 Collagen alpha-1(VIII) chain	57	73673	17	2	8	1	18.1	744
+										
+63	IPI00133751	Tax_Id=10090 Gene_Symbol=Mfap4 Isoform 1 of Microfibril-associated glycoprotein 4	57	29261	14	4	5	2	25.3	257
+										
+64	IPI00130102	Tax_Id=10090 Gene_Symbol=Des Desmin	57	53522	5	2	3	1	9.4	469
+										
+65	IPI00138180	Tax_Id=10090 Gene_Symbol=Cdh5 Cadherin-5	54	88133	1	1	1	1	1.5	784
+										
+66	IPI00122312	Tax_Id=10090 Gene_Symbol=Fgg fibrinogen gamma chain	54	51002	2	2	1	1	1.8	443
+										
+67	IPI00032140	Tax_Id=9606 Gene_Symbol=SERPINH1 Serpin H1	54	46525	2	2	1	1	3.6	418
+										
+68	IPI00113477	"Tax_Id=10090 Gene_Symbol=Col4a5 collagen, type IV, alpha 5"	53	163016	27	5	14	3	20.9	1691
+										
+69	IPI00031804	Tax_Id=9606 Gene_Symbol=VDAC3 Isoform 1 of Voltage-dependent anion-selective channel protein 3	51	30981	4	4	2	2	8.1	283
+										
+70	IPI00138892	Tax_Id=10090 Gene_Symbol=Uba52 Ubiquitin-60S ribosomal protein L40	49	15004	2	2	1	1	12.5	128
+										
+71	IPI00024145	Tax_Id=9606 Gene_Symbol=VDAC2 Isoform 2 of Voltage-dependent anion-selective channel protein 2	48	30849	2	1	2	1	7.8	283
+										
+72	IPI00221932	Tax_Id=10090 Gene_Symbol=Mal2 Protein MAL2	47	19310	6	2	4	1	18.3	175
+										
+73	IPI00888508	Tax_Id=9606 Gene_Symbol=C20orf181 Tissue plasminogen activator (Fragment)	46	18368	6	2	1	1	4.8	166
+										
+74	IPI00453996	Tax_Id=10090 Gene_Symbol=Myh14 Isoform 1 of Myosin-14	46	229359	5	2	4	2	3.5	2000
+										
+75	IPI00110753	Tax_Id=10090 Gene_Symbol=Tuba1a Tubulin alpha-1A chain	45	50788	2	2	2	2	5.3	451
+										
+76	IPI00186690	Tax_Id=9606 Gene_Symbol=GIT2 Isoform 2 of ARF GTPase-activating protein GIT2	44	53001	2	2	1	1	3.2	471
+										
+77	IPI00299404	Tax_Id=9606 Gene_Symbol=LAMB3 Laminin subunit beta-3	43	133366	3	2	2	1	2.2	1172
+										
+78	IPI01025142	Tax_Id=9606 Gene_Symbol=CYP46A1 Protein	41	55462	3	1	1	1	2.5	487
+										
+79	IPI00295053	Tax_Id=9606 Gene_Symbol=PCDHGA3 Isoform 1 of Protocadherin gamma-A3	38	101308	1	1	1	1	1.1	932
+										
+80	IPI01025580	Tax_Id=9606 Gene_Symbol=- Possible J 56 gene segment (Fragment)	37	2269	10	2	1	1	38.1	21
+										
+81	IPI00134390	Tax_Id=10090 Gene_Symbol=Dpep1 Dipeptidase 1	36	46109	6	3	3	2	10	410
+										
+82	IPI00649426	Tax_Id=10090 Gene_Symbol=Runx1t1 protein CBFA2T1 isoform 1	35	68265	4	1	2	1	3.8	604
+										
+83	IPI00019439	Tax_Id=9606 Gene_Symbol=FBN2 Isoform 1 of Fibrillin-2	35	335257	5	2	4	1	1.7	2912
+										
+84	IPI00320420	Tax_Id=10090 Gene_Symbol=Clu Clusterin	35	52250	1	1	1	1	2.7	448
+										
+85	IPI00134585	Tax_Id=10090 Gene_Symbol=Enpep Glutamyl aminopeptidase	33	108401	5	1	3	1	3.8	945
+										
+86	IPI00219871	"Tax_Id=9606 Gene_Symbol=NAA38 N-alpha-acetyltransferase 38, NatC auxiliary subunit"	33	10396	2	2	1	1	7.3	96
+										
+87	IPI00018873	Tax_Id=9606 Gene_Symbol=NAMPT Nicotinamide phosphoribosyltransferase	30	55772	2	1	2	1	10	491
+										
+88	IPI01026016	Tax_Id=9606 Gene_Symbol=C14orf166 23 kDa protein	29	22974	4	1	2	1	9.8	193
+										
+89	IPI00123191	Tax_Id=10090 Gene_Symbol=Prr14 Proline-rich protein 14	29	68396	3	1	1	1	2	612
+										
+90	IPI00380399	Tax_Id=10090 Gene_Symbol=2510003E04Rik Isoform 2 of KIF1-binding protein	28	45223	3	1	1	1	2.3	393
+										
+91	IPI00216007	Tax_Id=9606 Gene_Symbol=COL4A5 Isoform 2 of Collagen alpha-5(IV) chain	28	162671	18	1	9	1	16.9	1691
+										
+92	IPI00235481	Tax_Id=9606 Gene_Symbol=PMFBP1 Isoform 1 of Polyamine-modulated factor 1-binding protein 1	27	120497	8	3	1	1	0.8	1022
+										
+93	IPI01014173	Tax_Id=9606 Gene_Symbol=PRRC2C Isoform 2 of Protein PRRC2C	26	291429	5	1	4	1	3.2	2653
+										
+94	IPI00970293	Tax_Id=10090 Gene_Symbol=Emid1 EMI domain-containing protein 1 (Fragment)	26	11926	19	1	6	1	31	116
+										
+95	IPI00328293	"Tax_Id=9606 Gene_Symbol=SRRM1 cDNA FLJ61739, highly similar to Serine/arginine repetitive matrix protein 1"	25	103792	4	1	3	1	3.6	916
+										
+96	IPI00952796	Tax_Id=9606 Gene_Symbol=SOLH small optic lobes homolog (Drosophila)	23	44379	2	1	1	1	2.9	415
+										
+97	IPI00228674	Tax_Id=10090 Gene_Symbol=Tceal5 Transcription elongation factor A protein-like 5	22	22082	1	1	1	1	7	200
+										
+98	IPI00749207	Tax_Id=9606 Gene_Symbol=- Conserved hypothetical protein	22	30524	2	1	1	1	4.7	278
+										
+99	IPI00027252	Tax_Id=9606 Gene_Symbol=PHB2 Prohibitin-2	20	33276	7	1	5	1	20.7	299
+										
+100	IPI00980479	Tax_Id=9606 Gene_Symbol=COPS5 COP9 signalosome complex subunit 5	20	22265	1	1	1	1	9.6	197
+										
+101	IPI00650008	"Tax_Id=10090 Gene_Symbol=Dnajb5 DnaJ (Hsp40) homolog, subfamily B, member 5, isoform CRA_a"	20	43219	5	1	1	1	3.1	382
+										
+102	IPI00132474	Tax_Id=10090 Gene_Symbol=Itgb1 Integrin beta-1	20	91424	1	1	1	1	2.1	798
+										
+103	IPI00116377	Tax_Id=10090 Gene_Symbol=Pkd1 Polycystin-1	20	471869	4	1	3	1	1.6	4293
+										
+104	IPI00134345	Tax_Id=10090 Gene_Symbol=Gpr75 Probable G-protein coupled receptor 75	16	60575	2	1	1	1	3	540

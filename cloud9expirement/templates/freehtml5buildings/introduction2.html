@@ -1,0 +1,56 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li class="current">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li >
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+    <!--close menubar-->
+</nav>
+{% endblock %} 
+
+
+{% block content %}
+    <div class="content_item">
+        <h1 class="pageHeader">ECMAtlas, An Introduction...</h1>
+    </div>
+    
+    <div class="columnContainer"> 
+
+        <div class="EMC-explore-column">
+            <div class="exploreQuarterCompartment">
+                <p class="ratIntroductionParagraph" style="padding-top:0px;">Biochemical characterization of ECM proteins has been hampered due to many ECM proteins resistance to standard sample preparation methods.<br><br>As a result, analyses of ECM proteins by traditional <a href="http://proteomics.cancer.gov/whatisproteomics">proteomic</a> techniques have proven to be challenging.<br><br>One goal of the site is to a facilitate method development efforts by providing a platform to compare results from various ECM analysis experiments.</p> 
+            </div>
+        </div>
+        
+        <div class="EMC-explore-column">
+            {% if form_data.Species == "Homo Sapiens" %}
+                <img class="EMC-human-image" src={% static "images/vitruvian-man.png" %} />
+            {% elif form_data.Species == "Rattus" %}
+                <img class="EMC-rat-image-tall" src={% static "images/rat.png" %} />
+            {% endif %}
+            <form action="introduction3.html" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="Species" value="{{ form_data.Species }}" />
+                <div class="EMC-padding-10"></div>
+                <button class="exploreButton">Continue</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

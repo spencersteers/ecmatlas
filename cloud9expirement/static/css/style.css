@@ -1,0 +1,1021 @@
+/*
+primary blue: #14A5EC
+dark blue: #225886
+dark border grey: #dfdfdf
+light main content grey: #d4e3e3
+white: #ffffff
+almost black: #3e403f
+button white background: #ecf2f2
+main content white: #f7f7f7
+
+primary orange:#FF8800
+
+primary neon green/yellow: #bdf400
+compliment dark green: #7b9e00
+*/
+
+@font-face {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    /*src: url('../fonts/NewsCycle-Regular.eot');
+    src: local("News Cycle"), url('../fonts/NewsCycle-Regular.ttf');*/
+}
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+html {
+    height: 100%;
+    background-color:#dfdfdf;
+    background-size:cover;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:#dfdfdf;
+    height: 100%;
+    font: normal 12pt "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #3e403f;
+    
+}
+/* tell the browser to render HTML 5 elements as block */
+ article, aside, figure, footer, header, hgroup, nav, section {
+    display:block;
+}
+p {
+    padding: 0 0 10px 0;
+    color: #<div id="menubar">
+        <ul id="nav">
+            <li class="linkAdminPages">
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href="../datainput.html">Data Input</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href="../admin/">Admin Portal</a>
+            </li>
+            <li class="linkAdminPagesCurrent">
+                <a href="../list/">File Upload / Re-Parse a file </a>
+            </li>
+            <li class="linkAdminPages">
+                <a href="../validate/">Validation</a>
+            </li>
+        </ul>
+    </div>;
+    font-size: 100%
+}
+img {
+    border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font: normal 175%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #bdf400;
+    /*text-shadow:    1px 0 black, 0 -1px black, -1px 0 black, 0 -1px black;*/
+    letter-spacing: -1px;
+    margin: 0 0 10px 0;
+}
+h2 {
+    font: normal 165%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h3 {
+    font: normal 130%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h4, h5, h6 {
+    margin: 0;
+    padding: 0 0 0px 0;
+    font: normal 150%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #FFF;
+    line-height: 1.5em;
+}
+h5, h6 {
+    font: normal 95%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #ffc622;
+    padding-bottom: 15px;
+}
+span {
+    color: #FFF;
+    text-shadow: 1px 1px #fff;
+}
+a, a:hover {
+    color:#7b9e00;
+    background: transparent;
+    outline: none;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.headerLink, headerLink:hover {
+    color:#bdf400;
+    background: transparent;
+    outline: none;
+    text-decoration: none;
+}
+.headerLink:hover {
+    color:#bdf400;
+    background: transparent;
+    outline: none;
+    text-decoration: none;
+}
+
+ul {
+    margin: 2px 0 22px 30px;
+    line-height: 1.7em;
+    font-style: normal;
+    font-size: 100%;
+}
+ol {
+    margin: 8px 0 22px 20px;
+}
+ol li {
+    margin: 0 0 11px 0;
+}
+.div5EMPaddingBottom {
+    padding-bottom: 5em;
+}
+.formErrors {
+    color: red;
+    font-size: 1.5em;
+    padding-bottom:.5em;
+}
+#side_content {
+    width: 100%;
+}
+#main {
+    background-color:#f7f7f7;
+    border-right-style:solid;
+    border-left-style:solid;
+    border-width:10px;
+    width:900px;
+    min-height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color:#3e403f;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+}
+#banner {
+    padding: 15px 0 0 0;
+    background: transparent;
+    height: 120px;
+}
+nav {
+    width: 100%;
+    height: 50px;
+}
+#menubar {
+    width: 100%;
+    height: 20%;
+    float: left;
+    text-align: center;
+}
+#welcome {
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 10px 20px;
+    background: transparent;
+}
+#welcome h2 {
+    font: normal 500%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: -2px;
+    color: #bdf400;
+}
+
+.linkAdminPages{
+    font-size:10pt;
+}
+
+.linkAdminPagesCurrent{
+    color: #7b9e00;
+    text-decoration: underline;
+    font-size:10pt;
+}
+
+ul#nav {
+    display:inline-block;
+    margin:0;
+}
+ul#nav li {
+    padding: 0 0 0 0px;
+    list-style: none;
+    display: inline;
+    background: transparent;
+}
+ul#nav li a {
+    float: left;
+    font: bold 120% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    height: 24px;
+    margin: 10px 0 0 20px;
+
+    padding: 6px 20px 0 20px;
+    background: transparent;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border: 7px 7px 7px 7px;
+    text-align: center;
+    color: #7b9e00;
+    text-decoration: none;
+}
+ul#nav li.current a, ul#nav li:hover a {
+    color: #7b9e00;
+    text-decoration: underline;
+
+}
+.sidebar_container {
+    float: right;
+    min-height: 1px;
+    width: 20%;
+    padding: 0;
+}
+.dummySidebar_container {
+    float: left;
+    margin: 20px 10px 0 10px;
+    width: 190px;
+    padding: 0;
+}
+.sidebar {
+    float: left;
+    width: 190px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.sidebar_item {
+    width: 190px;
+}
+.sidebar h2 {
+    padding: 5px 0 0 0;
+    font: bold 150%"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    height: 30px;
+    text-shadow: 1px 1px #000;
+    color: #ffda57;
+}
+.sidebar h3 {
+    color: #FFF;
+}
+
+#middle_column {
+    width:60%;
+    height:100%;
+    margin:0;
+}
+#listHtmlContent {
+    width: 680px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.pageHeader{
+    color:#3e403f;
+    font-weight:bold;
+    font-size:35px;
+}
+
+.sectionHeader{
+    font-size:30px;
+    color:#3e403f;
+}
+
+.divPieChart{
+    padding-top:10px;
+    width:100%;
+    height:300px;
+}
+
+.ratIntroductionDescription {
+    width: 320px;
+    height: 250px;
+    float: right;
+}
+.ratIntroductionParagraph {
+    padding-top:40px;
+    padding-left:10px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    color:#3e403f;
+}
+
+.searchResultsParagraph {
+    padding-top:10px;
+    padding-left:10px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    text-align:center;
+    cursor: pointer;
+    border:none;
+    color:#3e403f;
+}
+
+.linksParagraph{
+    font-size: 16px;
+    margin-left:30px;
+}
+
+.linksDescriptionParagraph {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#000;
+    font-size: 16px;
+    margin-left:30px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+.linksSingleMiddleColumn{
+    padding-top:5px;
+    width:575px;
+    display:block;
+    margin: 0 auto;
+}
+
+.methodsSingleMiddleColumn{
+    padding-top:5px;
+    width:100%;
+    display:block;
+    margin: 0 auto;
+}
+
+.exploreLabel{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size:18px;
+}
+
+.descriptionParagraph {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#000;
+    font-size: 18px;
+    margin-left:30px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+.ratIntroductionContentImage {
+    width: 500px;
+    height: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:2em;
+}
+.ratIntroductionInvestigateFurther {
+    float: right;
+    width: 320px;
+    height: 250px;
+}
+.ratIntroductionButton {
+    background-color: #4bc9e7;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    float: right;
+    width: 320px;
+    height: 1.5em;
+}
+.introductionButton:hover {
+    border: none;
+    background:#3e403f;
+    color:#ffffff;
+    box-shadow: 0px 0px 1px #777;
+}
+
+.humanIntroductionDescription {
+    width: 320px;
+    height: 250px;
+    float: right;
+}
+.humanIntroductionParagraph {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width:100%;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    margin:auto;
+}
+
+.ecmAtlasMethodsIFrame{
+    width:860px;
+    height:600px;
+    margin-bottom:50px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.ecmAtlasMethodsImage{
+    width: 675px;
+    height: 500px;
+    margin: 0 auto;
+    padding-left:60px;
+}
+
+.ecmAtlasMethodsImageWhiteDiv{
+    width: 860px;
+    height: 510px;
+    margin: 0 auto;
+    background:#ffffff;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.methodsCaption {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#000;
+    font-size: 14px;
+    margin:0 auto;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    text-align:center;
+    padding-bottom:50px;
+}
+
+.methodsHeader {
+    margin:0 auto;
+    text-align:center;
+}
+
+.ecmAtlasImage{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.humanIntroductionContentImage {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding-bottom:2em;
+}
+
+#site_content {
+    overflow: hidden;
+    width: 900;
+    padding-bottom: 60px;
+    margin: 0 auto;
+}
+
+.exploreQuarterCompartment {
+    width: 90%;
+    padding-bottom:20px;
+    padding-left:20px;
+}
+
+.exploreTriCompartment{
+    width:100%;
+    padding-bottom:10px;
+    padding-left:20px;
+    float:left;
+    vertical-align:center;
+}
+
+.exploreAdvancedSearchTD{
+    vertical-align:top;
+}
+
+.columnContainer{
+    width:100%;
+    float:none;
+    display:block;
+}
+
+.triColumnContainer{
+    width:100%;
+    float:left;
+    overflow:hidden;
+}
+
+.singleMiddleColumn{
+    width:100%;
+    display:block;
+    margin: 0 auto;
+}
+
+.listSingleMiddleColumn{
+    width:675px;
+    display:block;
+    margin: 0 auto;
+    padding-left:70px;
+    padding-top:15px;
+}
+
+.exploreLink{
+    color:#7b9e00;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+}
+
+.exploreLink:hover{
+    color:#7b9e00;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    text-shadow: -1px 0 #bdf400, 0 1px #bdf400, 1px 0 #bdf400, 0 -1px #bdf400;
+}
+
+.exploreButton {
+    text-align:center;
+    background-color: #7b9e00;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-style:solid;
+    border-color:#7b9e00;
+    width: 15em;
+    padding: 0.2em 0em;
+    margin: 0 auto;
+    display: block;
+}
+.exploreButton:hover {
+    border-style:solid;
+    border-color:#7b9e00;
+    background:#ecf2f2;
+    color:#3e403f;
+    box-shadow: 0px 0px 1px #777;
+}
+
+.exploreButtonTriColumn {
+    text-align:center;
+    background-color: #7b9e00;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    width: 255px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top:28px;
+    margin-left:22px;
+    display: block;
+}
+.exploreButtonTriColumn:hover {
+    border: none;
+    background:#ecf2f2;
+    color:#3e403f;
+    box-shadow: 0px 0px 1px #777;
+}
+
+
+.content_item {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.content_imagetext {
+    width: 680px;
+    padding: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    float: left;
+}
+.content_image {
+    float: left;
+    width: 320px;
+    height: 250px;
+    margin: 0 20px 10px 0;
+}
+.content_form {
+    float: left;
+    width: 320px;
+    height: 250px;
+    margin: 0 20px 10px 0;
+}
+
+.content_subform {
+    float: left;
+    width: 170px;
+    height: 150px;
+    margin: 0 20px 10px 0;
+}
+
+.content_container {
+    width: 320px;
+    padding: 5px;
+    margin: 20px 10px 0 0;
+    float: left;
+}
+.content_input {
+    width: 900px;
+    padding: 20px;
+    margin: 20px 10px 0 0;
+    float: left;
+    font: normal 80% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #000;
+}
+footer {
+    position: absolute;
+    height: 40px;
+    line-height:40px;
+    width: 900px;
+    bottom: 0px;
+    
+    text-align: center;
+    margin:0 auto;
+    background-color:#3e403f;
+    color: #bdf400;
+}
+footer a {
+    color: #bdf400;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #bdf400;
+}
+.readmore a {
+    color: #FFF;
+    text-shadow: 1px 1px #004C8C;
+}
+.button_small {
+    font: normal 110% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    height: 15px;
+    width: 80px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px 2px 7px 2px;
+    border: 1px solid #FFF;
+    background: #0043A8;
+    background: -moz-linear-gradient(#000, #424242);
+    background: -o-linear-gradient(#000, #424242);
+    background: -webkit-linear-gradient(#000, #424242);
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border: 5px 5px 5px 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px;
+}
+.button_small a {
+    color: #ffda57;
+    padding-left: 5px;
+}
+.form_settings {
+    margin: 15px 0 0 0;
+}
+.form_settings p {
+    padding: 0 0 4px 0;
+}
+.form_settings span {
+    float: left;
+    width: 280px;
+    text-align: left;
+    text-shadow: none;
+}
+.form_settings input, .form_settings textarea {
+    padding: 2px;
+    width: 299px;
+    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border: 1px solid #E5E5DB;
+    background: #FFF;
+    color: #47433F;
+}
+.form_settings input[type="checkbox"] {
+    padding: 2px 0;
+    width: 15px;
+    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border: 0;
+    background: #FFF;
+    color: #47433F;
+    margin: 28px 0;
+}
+.form_settings .submit {
+    font: 100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border: 1px solid;
+    width: 99px;
+    margin: 0 0 0 206px;
+    height: 26px;
+    padding: 2px 0 3px 0;
+    cursor: pointer;
+    background: #0043A8;
+    background: -moz-linear-gradient(#43A9FF, #0043A8);
+    background: -o-linear-gradient(#43A9FF, #0043A8);
+    background: -webkit-linear-gradient(#43A9FF, #0043A8);
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border: 15px 15px 15px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+    color: #FFF;
+}
+.slideshow {
+    width: 940px;
+    height: 300px;
+    float: left;
+}
+/* styling for the slideshow on the homepage */
+ ul.slideshow {
+    list-style: none;
+    width: 940px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+ul.slideshow li {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+}
+ul.slideshow li.show {
+    z-index: 500;
+}
+ul img {
+    border: none;
+}
+#slideshow-caption {
+    width: 940px;
+    height: 38px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+}
+#slideshow-caption .slideshow-caption-container {
+    padding: 10px 25px 10px 25px;
+    background: transparent url(../images/transparent.png) repeat;
+    z-index: 1000;
+}
+#slideshow-caption p {
+    padding: 0;
+    font: normal 130% arial, sans-serif;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+}
+/*-------------------------------------------------*/
+ .datagrid table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+.datagrid {
+    font: normal 12px/150% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin:0 auto;
+}
+.datagrid table td, .datagrid table th {
+    padding: 3px 10px;
+}
+.datagrid table thead th {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3e403f), color-stop(1, #3e403f));
+    background:-moz-linear-gradient(center top, #3e403f 5%, #3e403f 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+    background-color:#3e403f;
+    color:#FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    border-left: 1px solid #dfdfdf;
+}
+.datagrid table thead th:first-child {
+    border: none;
+}
+.datagrid table tbody td {
+    color: #3e403f;
+    border-left: 1px solid #dfdfdf;
+    font-size: 12px;
+    font-weight: normal;
+}
+.datagrid table tbody .alt td {
+    background: #E1EEf4;
+    color: #3e403f;
+}
+.datagrid table tbody td:first-child {
+    border-left: none;
+}
+.datagrid table tbody tr:last-child td {
+    border-bottom: none;
+}
+.datagrid a:link {
+    color:#bdf400;
+}
+.datagrid a:visited {
+    color:#00ff00;
+}
+.datagrid a:link {
+    color:#ff00ff;
+}
+.datagrid a:link {
+    color:#7b9e00;
+}
+/*--please don't change this block I need it for debugging--*/
+
+/*----------------------------------------------------------*/
+ textarea {
+    resize: none;
+}
+#textSubject {
+}
+#textMessage {
+}
+#textareaMessage {
+}
+input[type="buttonSendEmail"]:hover {
+    color: #FFFFF;
+}
+
+#buttonUpload {
+    background-color: #424242;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+    padding-left:5px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#buttonUpload:hover {
+    border: none;
+    background:#3e403f;
+    color:#ffffff;
+    box-shadow: 0px 0px 1px #777;
+}
+
+
+#wrapper {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+ 
+ 
+.accordionButton {	
+	width: 800px;
+	margin:0 auto;
+	background: #3e403f;
+	border: 1px solid #dfdfdf;
+	color:#ffffff;
+	cursor: pointer;
+	
+	}
+ 
+.accordionContent {	
+	width: 800px;
+	margin:0 auto;
+	background: #7b9e00;
+	display: none;
+	}
+
+.EMC-upate-forum {
+ 
+    font: normal 10pt "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: center;
+
+}
+
+.EMC-upate-forum p label {
+    float: left;
+}
+
+.EMC-upate-forum p {
+    display: block;
+    overflow: hidden;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.EMC-upate-forum p select, .EMC-upate-forum p input[type='text'] {
+    float: right;
+    width: 180px;
+}
+.EMC-upate-forum p input[type='checkbox'] {
+    float: right;
+    margin-right: 85px;
+}
+
+.EMC-padding-10 {
+
+    height: 20px;
+
+}
+
+.EMC-button-link, .EMC-button-link:hover {
+    width: 100%;
+    height: 100%;
+    color:#fff;
+    display: block;
+    text-decoration: none;
+}
+
+.EMC-explore-column {
+    padding-top:20px;
+    width: 450px;
+    float:left;
+    
+}
+
+.exploreTriColumn {
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+    padding-left:25px;
+    width: 275px;
+    float:left;
+    position:relative;
+}
+
+.exploreTriDoubleColumns {
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+    width: 600px;
+    float:left;
+    position:relative;
+}
+
+.EMC-center-in-column {
+    width:90%;
+}
+
+.EMC-human-image {
+
+    width: 400px;
+    height: 400px;
+
+    margin: 0 auto;
+    display: block;
+
+}
+
+.EMC-rat-image {
+
+    width: 400px;
+    height: 200px;
+
+    margin: 25px auto;
+    display: block;
+
+}
+
+.EMC-rat-image-tall {
+
+    width: 400px;
+    height: 200px;
+
+    margin: 100px auto;
+    display: block;
+
+}
+
+.ECM-form-fieldset-radio {
+
+    border: none 0;
+
+}
+
+.ECM-form-fieldset-radio legend {
+
+    font: normal 18pt "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #3e403f;
+    margin: 0 0 10px 0;
+    padding-left:30px;
+
+}
+
+.ECM-form-fieldset-radio label {
+    color:#3e403f;
+    font: normal 16pt "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    display: block;
+    padding-left: 30px;
+
+}
+
+.resultsOutput{
+    width:100%;
+    padding-bottom:10px;
+    padding-left:20px;
+    vertical-align:center; 
+    margin: 0 auto;
+    width: 250px;
+}

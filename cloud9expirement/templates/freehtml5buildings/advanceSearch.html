@@ -1,0 +1,149 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+    {% block menubar %}
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="current"><a href="advanceSearch.html">Advanced Search</a></li>
+          <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li>
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+      </div><!--close menubar-->	
+    </nav>	
+    {% endblock %}
+
+{% block content %}
+
+
+    <div class="content_item">
+        <h1 class="pageHeader" style="text-align:center; margin-bottom:20px;">Advanced Search</h1>
+    </div>
+
+	<form method="post" action="results.html">
+        {% csrf_token %} 
+	    
+	    <div class="triColumnContainer">
+	        <table class="exploreTriColumn">
+	            <td class="exploreAdvancedSearchTD" >
+	            <div class="exploreTriCompartment">
+	                <h class="sectionHeader">Tissues</h>
+	                <p>
+                    <input type="checkbox" name="Tissues" value="Blood"> Blood <br>
+                    <input type="checkbox" name="Tissues" value="Bone"> Bone <br>
+                    <input type="checkbox" name="Tissues" value="Brain"> Brain <br>
+                    <input type="checkbox" name="Tissues" value="Brown Fat"> Brown Fat <br>
+                    <input type="checkbox" name="Tissues" value="Eye"> Eye <br>
+                    <input type="checkbox" name="Tissues" value="Heart"> Heart <br>
+                    <input type="checkbox" name="Tissues" value="Kidney"> Kidney <br>
+                    <input type="checkbox" name="Tissues" value="Liver"> Liver <br>
+                    <input type="checkbox" name="Tissues" value="Lower GI"> Lower GI <br>
+                    <input type="checkbox" name="Tissues" value="Lung"> Lung <br>
+                    <input type="checkbox" name="Tissues" value="Lymph"> Lymph <br>
+                    <input type="checkbox" name="Tissues" value="Mammary Gland"> Mammary Gland <br>
+                    <input type="checkbox" name="Tissues" value="Ovary"> Ovary <br>
+                    <input type="checkbox" name="Tissues" value="Pancreas"> Pancreas <br>
+                    <input type="checkbox" name="Tissues" value="Prostate"> Prostate <br>
+                    <input type="checkbox" name="Tissues" value="Skeletal Muscle"> Skeletal Muscle <br>
+                    <input type="checkbox" name="Tissues" value="Spleen"> Spleen <br>
+                    <input type="checkbox" name="Tissues" value="Stomach"> Stomach <br>
+                    <input type="checkbox" name="Tissues" value="Tendon"> Tendon <br>
+                    <input type="checkbox" name="Tissues" value="Testis"> Testis <br>
+                    <input type="checkbox" name="Tissues" value="Thyroid"> Thyroid <br>
+                    <input type="checkbox" name="Tissues" value="Urine">  Urine <br>
+                    <input type="checkbox" name="Tissues" value="Uterus"> Uterus <br>
+                    <input type="checkbox" name="Tissues" value="White Fat"> White Fat <br>
+                    </p>
+	            </div>
+	        </td>
+	        </table>
+	        
+	        <table class="exploreTriDoubleColumns">
+	    <tr>
+	        <td class="exploreAdvancedSearchTD">
+	            <div class="exploreTriCompartment" >
+	                <h class="sectionHeader">Gene Name</h>
+	                <p>
+                    Use quotations to keep Gene Names together.<br>
+                    Use SPACE to separate different Gene Names.<br>
+                    <input id="q" type="text" name="q" value="" /><br>
+                    </p>
+	            </div>
+	        </td>
+	        <td class="exploreAdvancedSearchTD">
+	            <div class="exploreTriCompartment">
+	                <h class="sectionHeader">Species</h>
+	                <p>
+	                <input type="checkbox" name="Species" value="Bovine"> Bovine <br>
+	                <input type="checkbox" name="Species" value="Homo Sapiens"> Homo Sapiens <br>
+	                <input type="checkbox" name="Species" value="Mus Mus"> Mus Mus <br>
+                    <input type="checkbox" name="Species" value="Other Primates"> Other Primates<br>
+                    <input type="checkbox" name="Species" value="Rattus"> Rattus <br>
+                    </p>
+	            </div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td class="exploreAdvancedSearchTD">
+	             <div class="exploreTriCompartment">
+	                <h class="sectionHeader">Type</h>
+	                <p>
+	                <input type="checkbox" name="Type" value="Isolated/Cultured cells"> Isolated/Cultured Cells<br>
+                    <input type="checkbox" name="Type" value="Primary tissue"> Primary Tissue <br>
+                    </p>
+	            </div>
+	        </td>
+	        <td class="exploreAdvancedSearchTD">
+	            <div class="exploreTriCompartment" >
+	                <h class="sectionHeader">Experiment Type</h>
+	                <p>
+                    <input type="checkbox" name="ExperimentType" value="global"> Global <br>
+                    <input type="checkbox" name="ExperimentType" value="targeted"> Targeted
+                    </p>
+	            </div>
+	        </td>
+	        
+	    </tr>
+	    <tr>
+	        <td class="exploreAdvancedSearchTD">
+	            <div class="exploreTriCompartment" >
+	              <h class="sectionHeader">Extraction Method</h>
+	                <p>
+	                <input type="checkbox" name="ExtractionMethod" value="Chemical Digestion"> Chemical Digestion <br>
+	                <input type="checkbox" name="ExtractionMethod" value="GDN-HCI"> GDN-HCI <br>
+	                <input type="checkbox" name="ExtractionMethod" value="SDS"> SDS <br>
+	                <input type="checkbox" name="ExtractionMethod" value="TFE"> TFE <br>
+	                <input type="checkbox" name="ExtractionMethod" value="Urea"> Urea <br>
+                    </p>    
+	            </div>
+	        </td>
+	        <td class="exploreAdvancedSearchTD">
+	            <div class="exploreTriCompartment" >
+	                <h class="sectionHeader">Gene Type</h>
+	                    <p>
+                        {%for x in b %}
+                        <input type="checkbox" name="GeneType" value="{{x}}"> {{x}} <br>
+                        {% endfor %}
+                        </p>
+	            </div>
+	        </td>
+	    </tr>    
+	    <tr>
+	        <td class="exploreAdvancedSearchTD" >
+	                <button type="submit" class="exploreButtonTriColumn"> Submit</button> 
+	        </td>
+	    </tr>
+	   </table>
+	    </div>
+        
+    </form>
+
+{% endblock %}

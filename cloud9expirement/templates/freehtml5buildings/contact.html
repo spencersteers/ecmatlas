@@ -1,0 +1,70 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}  
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <            <li class="current">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="ourwork.html">Our Work</a>
+            </li>
+            <li>
+                <a href="search.html">Search</a>
+            </li>
+        </ul>
+    </div>
+    <!--close menubar-->
+</nav>{% endblock %} 
+
+{% block content %}
+<script>
+    function submitContact() {
+
+        var contactForm = document.getElementById('contactForm');
+
+        var subject = document.getElementById('contactInputTextEmailSubject');
+        var message = document.getElementById('contactEmailMessage');
+
+        var subjectError = document.getElementById('subjectError');
+        if(subject.value === "")
+            subjectError.style.display = "";
+        else
+            subjectError.style.display = "none";
+
+        var messageError = document.getElementById('messageError');
+        if(message.value === "")
+            messageError.style.display = "";
+        else
+            messageError.style.display = "none";
+
+        if(subjectError.style.display === "none" && messageError.style.display === "none")
+            contactForm.submit();
+
+    }
+</script>
+<form id="contactForm" method="POST"> {% csrf_token %}
+    <br>
+    <FONT size="6" COLOR=#4bc9e7>Contact the ECMAtlas Team</FONT>
+    <br>
+    <br>
+    <FONT size="3" COLOR=#4bc9e7>Subject:</FONT>
+    <br>
+    <div id="subjectError" style="color:red;display:none;">Please enter a message subject.</div>
+    <input type="text"width="56" id="contactInputTextEmailSubject" name="contactInputTextEmailSubject">
+    <br>
+    <br>
+    <FONT size="3" COLOR=#4bc9e7>Message:</FONT>
+    <br>
+    <div id="messageError" style="color:red;display:none;">Please enter a message.</div>
+    <textarea id="contactEmailMessage" name="contactEmailMessage" rows="18" cols="56"></textarea>
+    <br>
+    <div id="buttonSendEmail" onclick="submitContact()" style="cursor:pointer;float:left;">Send</div>
+    <br>
+    </form>{%endblock%}
+    
+    
+    <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/image_slide.js"></script>

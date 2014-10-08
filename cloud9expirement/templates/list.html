@@ -1,0 +1,81 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %} 
+{%block title %}File Upload and List{% endblock %} 
+{% block menubar %}
+<nav>
+     <div id="menubar">
+        <ul id="nav">
+            <li class="linkAdminPages">
+                <a href={% url 'index' %}>Home</a>
+            </li>
+            <li class="linkAdminPagesCurrent">
+                <a href={% url 'datainput' %}>Data Input</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'admin:index' %}>Admin Portal</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'list' %}>File Upload / Re-Parse a file </a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'validate' %}>Validation</a>
+            </li>
+        </ul>
+    </div>
+</nav>	
+{% endblock %}
+{% block slideShow %}
+<!-- intentionally empty -->{% endblock %}
+
+{% block sideBar %}<div class="sidebar_container"></div>{% endblock %} 
+
+{% block content %}
+<script>
+
+</script>
+
+<div class="content_item">
+        <h1 class="pageHeader">Submit A File</h1>
+    </div>
+
+<div class="listSingleMiddleColumn">
+    <form action="{% url 'list' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div >
+            <p>{{ form.non_field_errors }}</p>
+        </div>
+        <div class="div5EMPaddingBottom">
+            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p></div>
+        <div class="formErrors">
+            <p>
+                {% for error in form.docfile.errors %}
+                    <div class="formErrors">{{error}}</div>
+                {% endfor %}
+        
+                {{ form.docfile }}
+            </p>
+        </div>
+        <div padding="20 emd">
+            <p><input type="submit" value="Upload" style="cursor:pointer;float:center;"/></p>
+        </div>
+                
+    <!--  Don't Break working code. this page is very sensitive.
+            Style the items as they are, and in place.
+    -->
+    </form>
+    
+    {% if documents %}
+            <ul style="list-style: none;">
+            {% for document in documents %}
+                <li>
+                    {{ document.docfile.name }}
+                    | <a href="../{{ document.docfile.name }}">Insert file into database</a>
+                    | <a href="../expunge/{{ document.docfile.name }}" link="red">Delete this file</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No documents.</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}

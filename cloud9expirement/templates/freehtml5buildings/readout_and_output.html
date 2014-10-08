@@ -1,0 +1,106 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li class="current">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li>
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %} 
+
+
+{% block content %}
+<div class="content_item">
+    <h1 class="pageHeader">Select a Gene Name</h1>
+</div>
+
+<div class="singleMiddleColumn" >
+
+    <form action="results.html" method="post" style="width: 350px; margin: 0 auto;">
+
+        {% csrf_token %} 
+
+        <input type="hidden" name="Species" value="{{ form_data.Species }}" />
+
+        {% for tissue in form_data.Tissues %}
+            <input type="hidden" name="Tissues" value="{{ tissue }}" />
+        {% endfor %}
+
+        {% for extype in form_data.ExperimentType %}
+            <input type="hidden" name="ExperimentType" value="{{ extype }}" />
+        {% endfor %}
+
+        {% for genetype in form_data.GeneType %}
+            <input type="hidden" name="GeneType" value="{{ genetype }}" />
+        {% endfor %}
+
+        <div class="exploreQuarterCompartment" style="margin:auto">
+  
+            <fieldset class="ECM-form-fieldset-radio">
+
+                <legend>Select a Gene Name</legend>
+
+                <label for="col1a1">
+                    <input type="radio" name="q" value="col1a1" /> COL1A1
+                </label>
+                <label for="col1a2">
+                    <input type="radio" name="q" value="col1a2" /> COL1A2
+                </label>
+                <label for="col3a1">
+                    <input type="radio" name="q" value="col3a1" /> COL3A1
+                </label>
+               <label for="dcn">
+                    <input type="radio" name="q" value="dcn" /> DCN
+                </label>
+               <label for="fn1">
+                    <input type="radio" name="q" value="fn1" /> FN1
+                </label>
+                <label for="tnc">
+                    <input type="radio" name="q" value="tnc" /> TNC
+                </label>
+                <label for="tnx">
+                    <input type="radio" name="q" value="tnx" /> TNX
+                </label>
+
+            </fieldset>
+
+        </div>
+        
+        <!--<div class="exploreQuarterCompartment" style="margin:auto">
+
+            <fieldset class="ECM-form-fieldset-radio">
+
+                <legend>Output Type</legend>
+
+                <label for="html">
+                    <input type="radio" name="choice" value="Html" checked> HTML
+                </label>
+                <label for="csv">
+                    <input type="radio" name="choice" value="CSV"> CSV
+                </label>
+
+            </fieldset>
+
+        </div>-->
+        <div class="EMC-padding-10"></div>
+        <button type="submit" class="exploreButton" style="margin-top:10px;">Get Results</button>
+    </form>
+
+</div>
+{% endblock %}

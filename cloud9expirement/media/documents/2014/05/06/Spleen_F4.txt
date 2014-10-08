@@ -1,0 +1,118 @@
+Header	--------------------------------------------------------									
+										
+Search title	Organ Analysis Spleen F4									
+Timestamp	2013-02-01T00:08:49Z									
+User	Ryan									
+Email										
+Report URI	http://hsc-mascot2/mascot/cgi/master_results.pl?file=E:/mascot/data/20130131/F065060.dat									
+Peak list data path	C:\Users\msf_admin\Documents\RyanH\Organ Analysis 201212\Spleen\20121218_Spleen_Frac4_Run01_121230141241_ITMSms2cid.txt									
+Peak list format	Mascot generic									
+Search type	MIS									
+Mascot version	2.4.1									
+Database	IPI_HumanMouse									
+Fasta file	IPI_HumanMouse_Annot.FASTA									
+Total sequences	150131									
+Total residues	62755156									
+Sequences after taxonomy filter	150131									
+Number of queries	566									
+										
+Decoy	--------------------------------------------------------									
+										
+Number of matches above identity threshold in search of real database	139									
+Number of matches above identity threshold in search of decoy database	10									
+Number of matches above homology threshold in search of real database	165									
+Number of matches above homology threshold in search of decoy database	15									
+										
+Fixed modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss							
+1	Carbamidomethyl (C)	57.021464								
+										
+Variable modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss(es)							
+1	Acetyl (Protein N-term)	42.010565								
+2	Gln->pyro-Glu (N-term Q)	-17.026549								
+3	Oxidation (M)	15.994915	0	63.998285						
+4	Oxidation (P)	15.994915								
+										
+Search Parameters	--------------------------------------------------------									
+										
+Taxonomy filter	All entries									
+Enzyme	Trypsin									
+Maximum Missed Cleavages	1									
+Fixed modifications	Carbamidomethyl (C)									
+Variable modifications	"Acetyl (Protein N-term),Gln->pyro-Glu (N-term Q),Oxidation (M),Oxidation (P)"									
+Peptide Mass Tolerance	15									
+Peptide Mass Tolerance Units	ppm									
+Fragment Mass Tolerance	0.6									
+Fragment Mass Tolerance Units	Da									
+Mass values	Monoisotopic									
+Instrument type	Default									
+Isotope error mode	1									
+Decoy database also searched	1									
+										
+Format parameters	--------------------------------------------------------									
+										
+Significance threshold	0.05									
+Max. number of hits	0									
+Use MudPIT protein scoring	1									
+Ions score cut-off	0									
+Include same-set proteins	0									
+Include sub-set proteins	0									
+Include unassigned	0									
+Require bold red	1									
+Use homology threshold	1									
+Group protein families	0									
+Re-score using Percolator	0									
+										
+Protein hits	--------------------------------------------------------									
+										
+prot_hit_num	prot_acc	prot_desc	prot_score	prot_mass	prot_matches	prot_matches_sig	prot_sequences	prot_sequences_sig	prot_cover	prot_len
+1	IPI00227299	Tax_Id=10090 Gene_Symbol=Vim Vimentin	1402	53712	61	52	19	17	39.1	466
+										
+2	IPI00130102	Tax_Id=10090 Gene_Symbol=Des Desmin	461	53522	25	21	12	10	24.5	469
+										
+3	IPI00339885	Tax_Id=10090 Gene_Symbol=Col6a1 Collagen alpha-1(VI) chain	452	109562	23	17	9	7	9.5	1025
+										
+4	IPI00126365	Tax_Id=10090 Gene_Symbol=Prg2 Bone marrow proteoglycan	328	24981	6	6	1	1	5.4	223
+										
+5	IPI00621027	Tax_Id=10090 Gene_Symbol=Col6a2 Collagen alpha-2(VI) chain	271	111406	20	13	9	8	10	1034
+										
+6	IPI00338452	Tax_Id=10090 Gene_Symbol=Col4a2 Collagen alpha-2(IV) chain	238	168417	17	12	7	6	5.4	1707
+										
+7	IPI00113824	Tax_Id=10090 Gene_Symbol=Hspg2 Basement membrane-specific heparan sulfate proteoglycan core protein	202	407847	10	6	6	3	2.2	3707
+										
+8	IPI00220327	"Tax_Id=9606 Gene_Symbol=KRT1 Keratin, type II cytoskeletal 1"	180	66170	6	6	3	3	4.7	644
+										
+9	IPI00830749	Tax_Id=10090 Gene_Symbol=Col6a3 LOW QUALITY PROTEIN: collagen alpha-3(VI) chain	176	355373	14	9	7	6	2.6	3284
+										
+10	IPI00021439	"Tax_Id=9606 Gene_Symbol=ACTB Actin, cytoplasmic 1"	164	42052	9	9	5	5	16.8	375
+										
+11	IPI00762198	Tax_Id=10090 Gene_Symbol=LOC100503164;Hbb-b1 Beta-globin	158	16280	4	4	2	2	15.2	151
+										
+12	IPI00109588	Tax_Id=10090 Gene_Symbol=Col4a1 Collagen alpha-1(IV) chain	147	161719	7	5	4	3	4	1669
+										
+13	IPI00009865	"Tax_Id=9606 Gene_Symbol=KRT10 Keratin, type I cytoskeletal 10"	140	59020	2	2	1	1	2.1	584
+										
+14	IPI00743696	Tax_Id=9606 Gene_Symbol=COL4A1 Isoform 1 of Collagen alpha-1(IV) chain	123	161654	5	2	3	1	2.5	1669
+										
+15	IPI00222188	Tax_Id=10090 Gene_Symbol=Col1a2 Collagen alpha-2(I) chain	77	129992	3	2	2	1	3.2	1372
+										
+16	IPI00010790	Tax_Id=9606 Gene_Symbol=BGN Biglycan	73	42027	2	2	1	1	3	368
+										
+17	IPI00453914	Tax_Id=10090 Gene_Symbol=Ccdc38 Isoform 1 of Coiled-coil domain-containing protein 38	62	65908	9	5	2	1	4.6	563
+										
+18	IPI00024284	Tax_Id=9606 Gene_Symbol=HSPG2 Basement membrane-specific heparan sulfate proteoglycan core protein	49	479253	6	3	4	2	1.2	4391
+										
+19	IPI01025580	Tax_Id=9606 Gene_Symbol=- Possible J 56 gene segment (Fragment)	47	2269	17	4	1	1	38.1	21
+										
+20	IPI00027255	Tax_Id=9606 Gene_Symbol=MYL6B Myosin light chain 6B	45	22864	1	1	1	1	6.3	208
+										
+21	IPI00006158	Tax_Id=9606 Gene_Symbol=LRMP Isoform 1 of Lymphoid-restricted membrane protein	34	62767	6	1	1	1	1.4	555
+										
+22	IPI00129571	Tax_Id=10090 Gene_Symbol=Col3a1 Collagen alpha-1(III) chain	30	140112	3	1	2	1	3.7	1464
+										
+23	IPI00329872	Tax_Id=10090 Gene_Symbol=Col1a1 Isoform 1 of Collagen alpha-1(I) chain	29	138974	3	2	2	2	2.4	1453
+										
+24	IPI00987638	Tax_Id=10090 Gene_Symbol=Tnxb tenascin-X	24	346705	3	1	1	1	0.6	3126

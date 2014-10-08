@@ -1,0 +1,29 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+<title>{% block title %}experiment{% endblock %}</title>
+
+{% block content %}
+    <h2>You have selected the experiment</h2>
+    <p>{{experiment.SearchTitle}}</p>
+    
+    <h2>Here are the Gene names found in this experiment</h2>
+    <br>
+    <div class="datagrid">
+        <table class="datagrid">
+            <thead>
+                <tr>
+                    <th>Proteins</th>
+                </tr>         
+            </thead>
+            <tbody>
+                {% for protein in found_pro_hits %}
+                    <tr>
+                        <td><a href="{% url 'protein' protein.id %}">{{protein.GeneName}}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+    {% block menubar %}
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ourwork.html">Our Work</a></li>
+          <li class="current"><a href="search.html">Search</a></li>
+        </ul>
+      </div><!--close menubar-->	
+    </nav>	
+    {% endblock %}
+
+{% block sideBar %}
+<div class="sidebar_container">
+    {% for art in articals %}
+    <div class="sidebar">
+        <div class="sidebar_item">
+            <h2>{{ art.Title }}</h2>
+            <p>{{ art.Artical }}</p>
+        </div>
+        <!--close sidebar_item-->
+    </div>
+    <!--close sidebar-->
+    {% endfor %}
+</div>
+<!--close sidebar_container-->
+{% endblock %} 
+
+{% block content %}
+    <div class="content_item">
+      <h2>Search by Mass Value</h2>
+	</div>
+	
+	<form id="searchbox" method="post" action="search.html">
+	    {% csrf_token %}
+	    <input type="radio" name="choice" value="Experiment" checked> <p>Experiment</p>
+        <input type="radio" name="choice" value="Protein"> <p>Protein</p>
+	    <label for="q"></label>
+	    <input id="q" type="text" name="q" value="" />
+	    <input id="submit" type="submit" value="Submit" />
+	</form>
+      {%if query_string %}
+	    <p> The Query string was: <b>{{ query_string }}</b><br> </p>
+	    <p> Here are the results: </p>
+	    
+	     <div class="datagrid">
+			<table>
+				<thead>
+					<tr>
+					    <th>Experiment Title</th>
+						<!--<th>Total Sequences</th>
+						<th>Total Sequences</th>
+						<th>Total Residues</th>
+						<th>Sequences After Taxonomy Filter</th>
+                        <th>Sequences After Taxonomy Filter</th>
+                        <th>Taxonomy Filter</th>-->
+                        <th>Enzyme</th>
+                        <th>Quantitation Method</th>
+                        <th>Fragment Mass Tolerance</th>
+                        <th>Mass Values</th>
+                        <th>Mass Value A</th>
+					</tr>
+				</thead>
+                <tbody>
+                    {% for experiment in found_entries %}
+                        <tr>
+                            <td>{{experiment.SearchTitle}}</td>
+                            <!--<td>{{experiment.SearchTitle}}</td>
+                            <td>{{experiment.TotalSequences}}</td>
+                            <td>{{experiment.TotalResidues}}</td>
+                            <td>{{experiment.SequencesAfterTaxonomyFilter}}</td>
+                            <td>{{experiment.CellType}}</td>
+                            <td>{{experiment.TaxonomyFilter}}</td>-->
+                            <td>{{experiment.GeneName}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+	{% endif %}
+{% endblock %}
+
+<p>
+    
+</p>
+
+{% block searchResults %}
+    <div id="content">
+    {%if query_string %}
+	    <p> The Query string was: <b>{{ query_string }}</b><br> </p>
+	    <p> Here are the results: </p>
+	    
+	     <div class="datagrid">
+			<table>
+				<thead>
+					<tr>
+						<th>Total Sequences</th>
+						<th>Total Sequences</th>
+						<th>Total Residues</th>
+						<th>Sequences After Taxonomy Filter</th>
+                        <th>Sequences After Taxonomy Filter</th>
+                        <th>Taxonomy Filter</th>
+                        <th>Enzyme</th>
+                        <th>Quantitation Method</th>
+                        <th>Fragment Mass Tolerance</th>
+                        <th>Mass Values</th>
+                        <th>Mass Value A</th>
+					</tr>
+				</thead>
+                <tbody>
+                    {% for experiment in found_entries %}
+                        <tr>
+                            <td>{{experiment.SearchTitle}}</td>
+                            <td>{{experiment.TotalSequences}}</td>
+                            <td>{{experiment.TotalResidues}}</td>
+                            <td>{{experiment.SequencesAfterTaxonomyFilter}}</td>
+                            <td>{{experiment.CellType}}</td>
+                            <td>{{experiment.TaxonomyFilter}}</td>
+                            <td>{{experiment.Enzyme}}</td>
+                            <td>{{experiment.QuantitationMethod}}</td>
+                            <td>{{experiment.FragmentMassTolerance}}</td>
+                            <td>{{experiment.MassValues}}</td>
+                            <td>{{experiment.massValue_A}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+	{% endif %}
+    </div>
+{% endblock %}

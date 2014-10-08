@@ -1,0 +1,218 @@
+Header	--------------------------------------------------------									
+										
+Search title	Organ Analysis Heart F5									
+Timestamp	2013-01-31T22:27:26Z									
+User	Ryan									
+Email										
+Report URI	http://hsc-mascot2/mascot/cgi/master_results.pl?file=E:/mascot/data/20130131/F064996.dat									
+Peak list data path	C:\Users\msf_admin\Documents\RyanH\Organ Analysis 201212\Heart\20121218_Heart_Frac5_Run01_ITMSms2cid.txt									
+Peak list format	Mascot generic									
+Search type	MIS									
+Mascot version	2.4.1									
+Database	IPI_HumanMouse									
+Fasta file	IPI_HumanMouse_Annot.FASTA									
+Total sequences	150131									
+Total residues	62755156									
+Sequences after taxonomy filter	150131									
+Number of queries	3799									
+										
+Decoy	--------------------------------------------------------									
+										
+Number of matches above identity threshold in search of real database	1380									
+Number of matches above identity threshold in search of decoy database	33									
+Number of matches above homology threshold in search of real database	1806									
+Number of matches above homology threshold in search of decoy database	62									
+										
+Fixed modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss							
+1	Carbamidomethyl (C)	57.021464								
+										
+Variable modifications	--------------------------------------------------------									
+										
+Identifier	Name	Delta	Neutral loss(es)							
+1	Acetyl (Protein N-term)	42.010565								
+2	Gln->pyro-Glu (N-term Q)	-17.026549								
+3	Oxidation (M)	15.994915	0	63.998285						
+4	Oxidation (P)	15.994915								
+										
+Search Parameters	--------------------------------------------------------									
+										
+Taxonomy filter	All entries									
+Enzyme	Trypsin									
+Maximum Missed Cleavages	1									
+Fixed modifications	Carbamidomethyl (C)									
+Variable modifications	"Acetyl (Protein N-term),Gln->pyro-Glu (N-term Q),Oxidation (M),Oxidation (P)"									
+Peptide Mass Tolerance	15									
+Peptide Mass Tolerance Units	ppm									
+Fragment Mass Tolerance	0.6									
+Fragment Mass Tolerance Units	Da									
+Mass values	Monoisotopic									
+Instrument type	Default									
+Isotope error mode	1									
+Decoy database also searched	1									
+										
+Format parameters	--------------------------------------------------------									
+										
+Significance threshold	0.05									
+Max. number of hits	0									
+Use MudPIT protein scoring	1									
+Ions score cut-off	0									
+Include same-set proteins	0									
+Include sub-set proteins	0									
+Include unassigned	0									
+Require bold red	1									
+Use homology threshold	1									
+Group protein families	0									
+Re-score using Percolator	0									
+										
+Protein hits	--------------------------------------------------------									
+										
+prot_hit_num	prot_acc	prot_desc	prot_score	prot_mass	prot_matches	prot_matches_sig	prot_sequences	prot_sequences_sig	prot_cover	prot_len
+1	IPI00756257	Tax_Id=10090 Gene_Symbol=Ttn Isoform 1 of Titin	30622	3933362	1804	1279	653	513	24.8	35213
+										
+2	IPI01010474	Tax_Id=9606 Gene_Symbol=TTN Titin	14420	3739794	964	637	352	249	13.3	33423
+										
+3	IPI00329872	Tax_Id=10090 Gene_Symbol=Col1a1 Isoform 1 of Collagen alpha-1(I) chain	1255	138974	113	61	37	24	39.9	1453
+										
+4	IPI00222188	Tax_Id=10090 Gene_Symbol=Col1a2 Collagen alpha-2(I) chain	1125	129992	83	54	29	24	37.2	1372
+										
+5	IPI00115564	Tax_Id=10090 Gene_Symbol=Slc25a4 ADP/ATP translocase 1	1066	33111	62	42	14	10	47	298
+										
+6	IPI00120761	Tax_Id=10090 Gene_Symbol=Slc4a1 Isoform Erythrocyte of Band 3 anion transport protein	826	103412	41	30	14	9	19.4	929
+										
+7	IPI00338964	Tax_Id=10090 Gene_Symbol=Atp2a2 Isoform SERCA2B of Sarcoplasmic/endoplasmic reticulum calcium ATPase 2	775	116437	39	28	18	12	20.9	1044
+										
+8	IPI00129571	Tax_Id=10090 Gene_Symbol=Col3a1 Collagen alpha-1(III) chain	735	140112	108	55	35	25	37.3	1464
+										
+9	IPI00220327	"Tax_Id=9606 Gene_Symbol=KRT1 Keratin, type II cytoskeletal 1"	674	66170	20	20	9	9	16.8	644
+										
+10	IPI00130102	Tax_Id=10090 Gene_Symbol=Des Desmin	581	53522	29	26	14	12	36.9	469
+										
+11	IPI00129404	Tax_Id=10090 Gene_Symbol=Myh6 Myosin-6	561	224225	33	21	19	11	13.1	1938
+										
+12	IPI00297646	Tax_Id=9606 Gene_Symbol=COL1A1 Collagen alpha-1(I) chain	401	139883	66	24	25	12	24.7	1464
+										
+13	IPI00291467	Tax_Id=9606 Gene_Symbol=SLC25A6 ADP/ATP translocase 3	363	33073	28	14	8	5	27.5	298
+										
+14	IPI00387557	Tax_Id=10090 Gene_Symbol=Actn2 alpha-actinin-2	358	104339	34	22	20	14	28.7	894
+										
+15	IPI00021304	"Tax_Id=9606 Gene_Symbol=KRT2 Keratin, type II cytoskeletal 2 epidermal"	346	66110	11	11	6	6	9.3	645
+										
+16	IPI00384444	"Tax_Id=9606 Gene_Symbol=KRT14 Keratin, type I cytoskeletal 14"	334	51872	14	12	7	6	15.3	472
+										
+17	IPI00124771	"Tax_Id=10090 Gene_Symbol=Slc25a3 Phosphate carrier protein, mitochondrial"	310	40063	20	17	7	6	21.8	357
+										
+18	IPI00008603	"Tax_Id=9606 Gene_Symbol=ACTA2 Actin, aortic smooth muscle"	277	42381	15	11	6	4	23.6	377
+										
+19	IPI00216308	Tax_Id=9606 Gene_Symbol=VDAC1 Voltage-dependent anion-selective channel protein 1	276	30868	14	10	7	6	32.9	283
+										
+20	IPI00293665	"Tax_Id=9606 Gene_Symbol=KRT6B Keratin, type II cytoskeletal 6B"	245	60315	11	11	7	7	13.7	564
+										
+21	IPI00024145	Tax_Id=9606 Gene_Symbol=VDAC2 Isoform 2 of Voltage-dependent anion-selective channel protein 2	236	30849	11	6	6	3	29.7	283
+										
+22	IPI00009865	"Tax_Id=9606 Gene_Symbol=KRT10 Keratin, type I cytoskeletal 10"	232	59020	9	7	5	4	7.5	584
+										
+23	IPI00031804	Tax_Id=9606 Gene_Symbol=VDAC3 Isoform 1 of Voltage-dependent anion-selective channel protein 3	231	30981	12	8	5	3	22.3	283
+										
+24	IPI00845618	"Tax_Id=10090 Gene_Symbol=Col6a3 collagen, type VI, alpha 3"	224	287965	22	13	12	8	6.5	2657
+										
+25	IPI00227299	Tax_Id=10090 Gene_Symbol=Vim Vimentin	168	53712	9	7	6	4	11.6	466
+										
+26	IPI00219729	Tax_Id=9606 Gene_Symbol=SLC25A11 Mitochondrial 2-oxoglutarate/malate carrier protein	146	34211	7	5	4	3	14	314
+										
+27	IPI00109588	Tax_Id=10090 Gene_Symbol=Col4a1 Collagen alpha-1(IV) chain	131	161719	11	4	9	2	10.3	1669
+										
+28	IPI00648357	"Tax_Id=10090 Gene_Symbol=Slc25a11 solute carrier family 25 (mitochondrial carrier oxoglutarate carrier), member 11"	129	20973	8	4	5	3	26.4	193
+										
+29	IPI00131176	Tax_Id=10090 Gene_Symbol=mt-Co2 Cytochrome c oxidase subunit 2	119	26130	6	4	3	2	16.3	227
+										
+30	IPI00229509	Tax_Id=10090 Gene_Symbol=Plec plectin isoform 1b2alpha	117	519488	25	7	17	7	4.7	4548
+										
+31	IPI00376379	"Tax_Id=9606 Gene_Symbol=KRT77 Keratin, type II cytoskeletal 1b"	114	62149	6	3	3	2	5.4	578
+										
+32	IPI00013933	Tax_Id=9606 Gene_Symbol=DSP Isoform DPI of Desmoplakin	102	334021	7	2	5	1	2.7	2871
+										
+33	IPI00553419	Tax_Id=10090 Gene_Symbol=Dsp Desmoplakin	102	335158	7	2	5	1	3.5	2883
+										
+34	IPI00132002	Tax_Id=10090 Gene_Symbol=Mgst3 Microsomal glutathione S-transferase 3	101	17118	3	2	2	1	24.8	153
+										
+35	IPI00119138	"Tax_Id=10090 Gene_Symbol=Uqcrc2 Cytochrome b-c1 complex subunit 2, mitochondrial"	97	48262	3	3	2	2	6	453
+										
+36	IPI00005614	"Tax_Id=9606 Gene_Symbol=SPTBN1 Isoform Long of Spectrin beta chain, brain 1"	95	275237	3	2	2	1	0.9	2364
+										
+37	IPI00013508	Tax_Id=9606 Gene_Symbol=ACTN1 Isoform 1 of Alpha-actinin-1	93	103563	7	4	5	3	6.5	892
+										
+38	IPI00664670	"Tax_Id=10090 Gene_Symbol=Flnc filamin C, gamma"	90	294786	10	5	8	4	4.9	2737
+										
+39	IPI00131771	Tax_Id=10090 Gene_Symbol=Cox6c Cytochrome c oxidase subunit 6C	86	8464	6	4	3	2	34.2	76
+										
+40	IPI00121576	Tax_Id=10090 Gene_Symbol=Apoo Apolipoprotein O	82	24349	1	1	1	1	5.2	212
+										
+41	IPI00298281	Tax_Id=9606 Gene_Symbol=LAMC1 Laminin subunit gamma-1	81	183191	3	2	2	1	1.6	1609
+										
+42	IPI00118899	Tax_Id=10090 Gene_Symbol=Actn4 Alpha-actinin-4	79	105368	7	3	5	2	8.1	912
+										
+43	IPI00120212	"Tax_Id=10090 Gene_Symbol=Ndufa9 NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9, mitochondrial"	71	42612	6	3	3	2	11.4	377
+										
+44	IPI00743696	Tax_Id=9606 Gene_Symbol=COL4A1 Isoform 1 of Collagen alpha-1(IV) chain	67	161654	8	2	7	1	9.8	1669
+										
+45	IPI00331214	Tax_Id=10090 Gene_Symbol=Cd36 Platelet glycoprotein 4	67	53234	7	3	5	2	20.3	472
+										
+46	IPI00323134	Tax_Id=10090 Gene_Symbol=Cdh2 Cadherin-2	64	100191	14	1	7	1	11.8	906
+										
+47	IPI00125929	Tax_Id=10090 Gene_Symbol=Ndufa4 NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 4	61	9321	6	4	2	2	26.8	82
+										
+48	IPI00337541	"Tax_Id=9606 Gene_Symbol=NNT NAD(P) transhydrogenase, mitochondrial"	55	114564	7	2	5	2	5	1086
+										
+49	IPI00338452	Tax_Id=10090 Gene_Symbol=Col4a2 Collagen alpha-2(IV) chain	53	168417	15	3	11	2	12.2	1707
+										
+50	IPI00021369	Tax_Id=9606 Gene_Symbol=CRYAB Alpha-crystallin B chain	51	20146	3	2	2	1	19.4	175
+										
+51	IPI00025796	"Tax_Id=9606 Gene_Symbol=NDUFS3 NADH dehydrogenase [ubiquinone] iron-sulfur protein 3, mitochondrial"	47	30337	2	1	1	1	5.7	264
+										
+52	IPI00153381	Tax_Id=10090 Gene_Symbol=Uqcr10 Cytochrome b-c1 complex subunit 9	47	7441	4	3	2	2	37.5	64
+										
+53	IPI00330331	Tax_Id=10090 Gene_Symbol=Brd1 bromodomain containing 1	47	135569	4	2	2	1	1.5	1189
+										
+54	IPI00915477	"Tax_Id=10090 Gene_Symbol=Obscn obscurin, cytoskeletal calmodulin and titin-interacting RhoGEF"	41	842698	12	2	7	1	1.5	7643
+										
+55	IPI01025332	Tax_Id=9606 Gene_Symbol=SHE Protein	39	15292	3	1	2	1	8.3	132
+										
+56	IPI01025580	Tax_Id=9606 Gene_Symbol=- Possible J 56 gene segment (Fragment)	37	2269	10	3	1	1	38.1	21
+										
+57	IPI00378974	Tax_Id=10090 Gene_Symbol=Myom3 Myomesin-3	37	162761	5	3	2	1	1.2	1439
+										
+58	IPI00100810	Tax_Id=9606 Gene_Symbol=UQCR10 ubiquinol-cytochrome c reductase complex (7.2 kD)	36	14562	5	1	3	1	30.3	132
+										
+59	IPI00341550	Tax_Id=10090 Gene_Symbol=mt-Nd1 NADH-ubiquinone oxidoreductase chain 1	36	36092	1	1	1	1	2.5	318
+										
+60	IPI00380273	Tax_Id=10090 Gene_Symbol=Gja1 Gap junction protein	36	50006	3	1	2	1	7.1	434
+										
+61	IPI00031506	Tax_Id=9606 Gene_Symbol=HCN1 Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 1	35	99360	3	1	2	1	4	890
+										
+62	IPI00000935	Tax_Id=9606 Gene_Symbol=PLN Cardiac phospholamban	33	6275	1	1	1	1	21.2	52
+										
+63	IPI00138068	Tax_Id=10090 Gene_Symbol=Nav3 neuron navigator 3	32	254301	8	1	5	1	4	2366
+										
+64	IPI00462013	Tax_Id=10090 Gene_Symbol=Setbp1 SET-binding protein	32	173768	5	1	2	1	1.1	1582
+										
+65	IPI00000138	"Tax_Id=9606 Gene_Symbol=MGAT1 Alpha-1,3-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase"	31	51132	3	1	1	1	3.4	445
+										
+66	IPI01010447	Tax_Id=9606 Gene_Symbol=UBC Ubiquitin	29	9954	4	2	2	1	29.5	88
+										
+67	IPI00132390	Tax_Id=10090 Gene_Symbol=Ndufb4;Gm3244;Gm3873 NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 4	28	15072	1	1	1	1	19.4	129
+										
+68	IPI00225062	Tax_Id=10090 Gene_Symbol=Srrm2 Isoform 3 of Serine/arginine repetitive matrix protein 2	28	285841	11	1	7	1	3.5	2603
+										
+69	IPI00132134	Tax_Id=10090 Gene_Symbol=Pkp2 Putative plakophilin 2	26	88562	4	1	2	1	6.3	795
+										
+70	IPI00759683	Tax_Id=9606 Gene_Symbol=CAV1 Isoform Beta of Caveolin-1	24	17183	6	1	2	1	25.2	147
+										
+71	IPI00024757	Tax_Id=9606 Gene_Symbol=UQCR11 Cytochrome b-c1 complex subunit 10	24	6565	2	1	1	1	21.4	56
+										
+72	IPI00229475	Tax_Id=10090 Gene_Symbol=Jup Junction plakoglobin	24	82490	3	1	2	1	4.7	745
+										
+73	IPI00848481	Tax_Id=10090 Gene_Symbol=AA414992 hypothetical protein LOC102402	20	30136	2	1	1	1	4.8	269
+										
+74	IPI00335946	Tax_Id=9606 Gene_Symbol=FAM120B cDNA FLJ56631	20	108100	2	1	1	1	2.6	933

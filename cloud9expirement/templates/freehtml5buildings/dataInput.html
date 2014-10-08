@@ -1,0 +1,55 @@
+{% extends "freehtml5buildings/base.html" %}
+{% load staticfiles %}
+
+{% block title %}Data Input{% endblock %}
+
+{% block menubar %}
+<nav>
+     <div id="menubar">
+        <ul id="nav">
+            <li class="linkAdminPages">
+                <a href={% url 'index' %}>Home</a>
+            </li>
+            <li class="linkAdminPagesCurrent">
+                <a href={% url 'datainput' %}>Data Input</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'admin:index' %}>Admin Portal</a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'list' %}>File Upload / Re-Parse a file </a>
+            </li>
+            <li class="linkAdminPages">
+                <a href={% url 'validate' %}>Validation</a>
+            </li>
+        </ul>
+    </div>
+</nav>	
+{% endblock %}
+    
+{% block slideShow %}
+<!---
+  <div class="slideshow">
+    <ul class="slideshow">
+      <li class="show"><img width="940" height="300" src={% static "images/home_1.jpg" %} alt="&quot;Enter your caption here&quot;" /></li>
+      <li><img width="940" height="300" src={% static "images/home_2.jpg" %} alt="&quot;Image: home_2&quot;" /></li>
+    </ul> 
+  </div><!--close slideshow-->	
+{% endblock %}
+
+{% block sideBar %} 
+<!-- intentionally empty -->
+{% endblock %}
+    
+{% block content %}
+<div class="content_item">
+
+<div class="content_input">
+
+    <p>{{ pageData }}</p>
+
+</div>
+    
+</div><!--close content_item-->
+
+{% endblock %}

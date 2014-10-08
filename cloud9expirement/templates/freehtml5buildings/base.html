@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html> 
+
+<html>
+    <head>
+
+        <title>{% block title %}ECM Atlas{% endblock %}</title>
+
+        <meta name="description" content="website description" />
+        <meta name="keywords" content="website keywords, website keywords" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+
+        <link rel="stylesheet" type="text/css" href={% static "css/style.css" %} />
+
+        <script type="text/javascript" src={% static "js/modernizr-1.5.min.js" %} ></script>
+
+    </head>
+
+    <body>
+
+        <div id="main">
+            <header>
+                <div id="banner">
+                    <div id="welcome">
+                        <h2><a class ="headerLink"  href="index.html">ECM Atlas</a></h2>
+                    </div>
+                </div>
+            </header>
+
+            {% block menubar %}
+            {% endblock %} 
+    
+            <div id="site_content">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        
+            <footer>
+                <a href={% url 'index' %}>Home </a>|
+                <a href={% url 'advanceSearch' %}> Advanced Search </a>|
+                <a href="mailto:kirk.hansen@gmail.com">Contact </a>|
+                <a href="http://www.freehtml5templates.co.uk">Free HTML5 Templates</a>
+            </footer>
+
+        </div>
+        <script type="text/javascript" src={% static "js/jquery.min.js" %}></script>
+        <script type="text/javascript" src={% static "js/jquery-ui-1.10.4.custom.js" %}></script>
+        <script type="text/javascript" src={% static "js/jquery-ui-1.10.4.custom.min.js" %}></script>
+        <script type="text/javascript" src={% static "js/jquery.tablesorter.js" %}></script>
+        <script type="text/javascript" src={% static "js/js_script.js" %}></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,55 @@
+{% extends "freehtml5buildings/base.html" %} {% load staticfiles %}
+
+{% block menubar %}
+<nav>
+    <div id="menubar">
+        <ul id="nav">
+            <li >
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="advanceSearch.html">Advanced Search</a>
+            </li>
+            <li>
+                <a href="stats.html">Stats</a>
+            </li>
+            <li class="current">
+                <a href="methods.html">Methods</a>
+            </li>
+            <li>
+                <a href="links.html">Links</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %} 
+
+
+{% block content %}
+<div class="content_item">
+    <h1 class="pageHeader">Methods</h1>
+</div>
+
+<div class="methodsSingleMiddleColumn" >
+    <p class="methodsHeader">
+        <h class="sectionHeader">ECM Protein Extraction Process</h>
+    </p>
+    <iframe class="ecmAtlasMethodsIFrame" src="{% static "images/Protein_Extraction_from_Tissue_Method_Overview.pdf" %}"></iframe>
+    
+    <p class ="methodsCaption"></p>
+    <p class="methodsHeader">
+        <h class="sectionHeader">Reporter "Proteotypic" Peptides</h>
+    </p>
+    <div class="ecmAtlasMethodsImageWhiteDiv">
+    <img class="ecmAtlasMethodsImage" src="{% static "images/All_6_eQs_TIC_PS.png" %}" style="padding-bottom:50px;"/>
+    </div>
+    <p class="methodsCaption" style="padding-bottom:100px;"></p>
+    
+    <p class="methodsHeader">
+        <h class="sectionHeader">Reporter "Proteotypic" Peptides Table</h>
+    </p>
+    <iframe class="ecmAtlasMethodsIFrame" src="{% static "images/eqTable1_.pdf" %}"></iframe>
+    <p class="methodsCaption">Please send requests for new reporter peptides to <a href="mailto:kirk.hansen@gmail.com">kirk.hansen@gmail.com</a></p>
+
+</div>
+{% endblock %}
