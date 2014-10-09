@@ -15,15 +15,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql' , # 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ecmatlas',     # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'ecmadmin',
-        'PASSWORD': 'halo2rocks',
+        'USER': 'root',
+        'PASSWORD': '1234',
         'HOST': '', # os.environ['IP'],  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                # Set to empty string for default.
     }
 }
 
 # SESSION_SERIALIZER from json to pickle to maintain filterability of results
-# (for 1.5 to 1.6 port only) 
+# (for 1.5 to 1.6 port only)
 ##SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
