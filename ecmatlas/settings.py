@@ -38,6 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
+# Packages
+INSTALLED_APPS += (
+    'rest_framework',
+)
+
 # Custom
 INSTALLED_APPS += (
     'ecmdatabase',
