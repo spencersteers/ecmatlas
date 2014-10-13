@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Default
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -36,6 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+)
+
+# Custom
+INSTALLED_APPS += (
+    'ecmdatabase',
 )
 
 MIDDLEWARE_CLASSES = (

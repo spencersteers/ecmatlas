@@ -1,0 +1,87 @@
+[
+  {
+    "pk": 1,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "gene_name": "Myh6",
+      "name": "10090",
+      "sequence": null,
+      "long_gene_name": "Myh6 Myosin",
+      "isoelectric_point": null,
+      "prot_acc": "IPI00129404",
+      "length": 1938,
+      "taxidermy_id": null,
+      "validated": true,
+      "species": "RATTUS",
+      "taxidermy_string": null
+    }
+  },
+  {
+    "pk": 2,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "gene_name": "Myh7",
+      "name": "10090",
+      "sequence": null,
+      "long_gene_name": "Myh7 Myosin",
+      "isoelectric_point": null,
+      "prot_acc": "IPI00130653",
+      "length": 1935,
+      "taxidermy_id": null,
+      "validated": true,
+      "species": "RATTUS",
+      "taxidermy_string": null
+    }
+  },
+  {
+    "pk": 3,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "gene_name": "Hbb",
+      "name": "10090",
+      "sequence": null,
+      "long_gene_name": "Hbb",
+      "isoelectric_point": null,
+      "prot_acc": "IPI00988950",
+      "length": 147,
+      "taxidermy_id": null,
+      "validated": true,
+      "species": "RATTUS",
+      "taxidermy_string": null
+    }
+  },
+  {
+    "pk": 4,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "gene_name": "Atp5b",
+      "name": "10090",
+      "sequence": null,
+      "long_gene_name": "Atp5b ATP synthase subunit beta",
+      "isoelectric_point": null,
+      "prot_acc": "IPI00468481",
+      "length": 529,
+      "taxidermy_id": null,
+      "validated": true,
+      "species": "HOMO SAPIENS",
+      "taxidermy_string": null
+    }
+  },
+  {
+    "pk": 5,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "gene_name": "Hba",
+      "name": "10090",
+      "sequence": null,
+      "long_gene_name": "Hba",
+      "isoelectric_point": null,
+      "prot_acc": "IPI00845802",
+      "length": 142,
+      "taxidermy_id": null,
+      "validated": true,
+      "species": "HOMO SAPIENS",
+      "taxidermy_string": null
+    }
+  }
+]

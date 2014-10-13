@@ -84,7 +84,7 @@ class Protein(models.Model):
     def __str__(self):
         return str(self.long_gene_name) + ": " + str(self.prot_acc)
 
-class Experiments(models.Model):
+class Experiment(models.Model):
     '''
     This is the base experiment model that will contain experiment specific data
     '''
@@ -121,15 +121,15 @@ class Experiments(models.Model):
     instrument_type                     = models.CharField(max_length=45, null=True)
     isotope_error_mode                  = models.IntegerField(null=True)
     significance_threshold              = models.FloatField(null=True)
-    max_number_of_hits                  = models.BooleanField()
-    use_mud_pit_protein_scoring         = models.BooleanField()
-    ions_score_cutoff                   = models.BooleanField()
-    include_sameset_proteins            = models.BooleanField()
-    include_subset_proteins             = models.BooleanField()
-    include_unassigned                  = models.BooleanField()
-    require_bold_red                    = models.BooleanField()
-    use_homology_threshold              = models.BooleanField()
-    group_protein_families              = models.BooleanField()
+    max_number_of_hits                  = models.BooleanField(default=False)
+    use_mud_pit_protein_scoring         = models.BooleanField(default=False)
+    ions_score_cutoff                   = models.BooleanField(default=False)
+    include_sameset_proteins            = models.BooleanField(default=False)
+    include_subset_proteins             = models.BooleanField(default=False)
+    include_unassigned                  = models.BooleanField(default=False)
+    require_bold_red                    = models.BooleanField(default=False)
+    use_homology_threshold              = models.BooleanField(default=False)
+    group_protein_families              = models.BooleanField(default=False)
     validated                           = models.BooleanField(default=False)
 
     def __str__(self):
