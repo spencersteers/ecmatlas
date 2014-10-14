@@ -1,0 +1,51 @@
+[
+  {
+    "pk": 1,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Bone"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Tendon"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Brain"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Eye"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Prostate"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Liver"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "ecmdatabase.tissue",
+    "fields": {
+      "name": "Lung"
+    }
+  }
+]

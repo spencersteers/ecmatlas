@@ -41,7 +41,10 @@ INSTALLED_APPS = (
 # Packages
 INSTALLED_APPS += (
     'rest_framework',
+    'corsheaders',
 )
+
+
 
 # Custom
 INSTALLED_APPS += (
@@ -56,6 +59,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
 )
 
 ROOT_URLCONF = 'ecmatlas.urls'
@@ -75,6 +80,29 @@ DATABASES = {
     }
 }
 
+
+# Django-Rest-Framework
+# http://www.django-rest-framework.org/api-guide/settings
+REST_FRAMEWORK = {
+    'PAGINATE_BY': 10,
+    'PAGINATE_BY_PARAM': 'page_size',
+    'MAX_PAGINATE_BY': 100,
+    'DEFAULT_PAGINATION_SERIALIZER_CLASS':
+        'rest_framework_ember.pagination.EmberPaginationSerializer',
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework_ember.parsers.EmberJSONParser',
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser'
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework_ember.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ),
+}
+
+# django-cors-headers
+# https://github.com/ottoyiu/django-cors-headers/
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
