@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from ecmdatabase.models import Protein
+from ecmdatabase.serializers import ProteinSerializer
+from rest_framework import generics
 
-# Create your views here.
+
+class ProteinList(generics.ListCreateAPIView):
+    queryset = Protein.objects.all()
+    serializer_class = ProteinSerializer
+
+class ProteinDetail(generics.RetrieveAPIView):
+    queryset = Protein.objects.all()
+    serializer_class = ProteinSerializer
