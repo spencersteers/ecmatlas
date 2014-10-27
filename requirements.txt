@@ -1,2 +1,6 @@
 Django==1.7
+django-cors-headers==0.13
+djangorestframework==2.4.3
+inflection==0.2.1
 mysql-connector-python==2.0.1
+rest-framework-ember==1.0.3

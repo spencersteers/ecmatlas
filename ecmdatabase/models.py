@@ -65,6 +65,13 @@ EXPIREMENT_TYPE = (
 
 # END_TODO
 
+#temp
+class Tissue(models.Model):
+    name                     = models.CharField(max_length=255, null=True)
+
+    def __str__(self):
+        return str(self.name)
+
 class Protein(models.Model):
     '''
     This is the proteins' common data among all experiments
@@ -80,6 +87,7 @@ class Protein(models.Model):
     taxidermy_id             = models.IntegerField(null=True)
     sequence                 = models.TextField(null=True)
     validated                = models.BooleanField(default=True)
+    tissue                   = models.ForeignKey(Tissue, related_name='proteins')
 
     def __str__(self):
         return str(self.long_gene_name) + ": " + str(self.prot_acc)

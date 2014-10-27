@@ -13,7 +13,8 @@
       "taxidermy_id": null,
       "validated": true,
       "species": "RATTUS",
-      "taxidermy_string": null
+      "taxidermy_string": null,
+      "tissue": 1
     }
   },
   {
@@ -30,7 +31,8 @@
       "taxidermy_id": null,
       "validated": true,
       "species": "RATTUS",
-      "taxidermy_string": null
+      "taxidermy_string": null,
+      "tissue": 1
     }
   },
   {
@@ -47,7 +49,8 @@
       "taxidermy_id": null,
       "validated": true,
       "species": "RATTUS",
-      "taxidermy_string": null
+      "taxidermy_string": null,
+      "tissue": 1
     }
   },
   {
@@ -64,7 +67,8 @@
       "taxidermy_id": null,
       "validated": true,
       "species": "HOMO SAPIENS",
-      "taxidermy_string": null
+      "taxidermy_string": null,
+      "tissue": 2
     }
   },
   {
@@ -81,7 +85,8 @@
       "taxidermy_id": null,
       "validated": true,
       "species": "HOMO SAPIENS",
-      "taxidermy_string": null
+      "taxidermy_string": null,
+      "tissue": 3
     }
   }
 ]
