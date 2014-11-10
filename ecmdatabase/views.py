@@ -13,7 +13,7 @@ from django.core.urlresolvers import reverse
 
 
 
-class ProteinList(generics.ListCreateAPIView):
+class ProteinList(generics.ListAPIView):
     resource_name = 'protein'
     queryset = Protein.objects.all()
     serializer_class = ProteinSerializer
@@ -24,7 +24,7 @@ class ProteinDetail(generics.RetrieveAPIView):
     serializer_class = ProteinSerializer
 
 
-class TissueList(generics.ListCreateAPIView):
+class TissueList(generics.ListAPIView):
     resource_name = 'tissue'
     queryset = Tissue.objects.all()
     serializer_class = TissueSerializer
@@ -35,7 +35,7 @@ class TissueDetail(generics.RetrieveAPIView):
     serializer_class = TissueSerializer
 
 
-class ExperimentList(generics.ListCreateAPIView):
+class ExperimentList(generics.ListAPIView):
     resource_name = 'experiment'
     queryset = Experiment.objects.all()
     serializer_class = ExperimentSerializer
@@ -46,7 +46,7 @@ class ExperimentDetail(generics.RetrieveAPIView):
     serializer_class = ExperimentSerializer
 
 
-class ProteinHitList(generics.ListCreateAPIView):
+class ProteinHitList(generics.ListAPIView):
     resource_name = 'protein_hit'
     queryset = ProteinHit.objects.all()
     serializer_class = ProteinHitSerializer
@@ -57,7 +57,7 @@ class ProteinHitDetail(generics.RetrieveAPIView):
     serializer_class = ProteinHitSerializer
 
 
-class VariableModificationList(generics.ListCreateAPIView):
+class VariableModificationList(generics.ListAPIView):
     resource_name = 'variable_modifications'
     queryset = VariableModification.objects.all()
     serializer_class = VariableModificationSerializer
