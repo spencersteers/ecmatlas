@@ -13,12 +13,12 @@ class TissueSerializer(serializers.ModelSerializer):
 class ProteinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Protein
-        fields = ('id', 'long_gene_name', 'gene_name', 'prot_acc', 'name', 'tissue')
+        fields = ('id', 'sequence', 'gene_name', 'protein_name', 'species', 'tissues')
 
 class ExperimentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Experiment
-        #fields = 
+        #fields =
 
 
 class ProteinHitSerializer(serializers.ModelSerializer):

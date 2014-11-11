@@ -8,6 +8,7 @@ SPECIES_CHOICES = (
     ('RATTUS','Rattus'),
     ('MUS MUS','Mus mus'),
     ('OTHER PRIMATES','Other Primates'),
+    ('SHARED', 'Shared')
 )
 
 TYPE_CHOICES = (
@@ -76,21 +77,14 @@ class Protein(models.Model):
     '''
     This is the proteins' common data among all experiments
     '''
-    long_gene_name           = models.CharField(max_length=45)
-    gene_name                = models.CharField(max_length=45)
-    prot_acc                 = models.CharField(max_length=45, null=True)
-    name                     = models.CharField(max_length=45, null=True)
-    species                  = models.CharField(max_length=45, choices=SPECIES_CHOICES, null=True)
-    length                   = models.IntegerField(null=True)
-    isoelectric_point        = models.IntegerField(null=True)
-    taxidermy_string         = models.CharField(max_length=45, null=True)
-    taxidermy_id             = models.IntegerField(null=True)
-    sequence                 = models.TextField(null=True)
-    validated                = models.BooleanField(default=True)
-    tissue                   = models.ForeignKey(Tissue, related_name='proteins')
+    sequence                 = models.TextField()
+    gene_name                = models.CharField(max_length=255)
+    protein_name             = models.CharField(max_length=255, null=True)
+    species                  = models.CharField(max_length=255, null=True)
+    tissues                  = models.ManyToManyField(Tissue, related_name='proteins')
 
     def __str__(self):
-        return str(self.long_gene_name) + ": " + str(self.prot_acc)
+        return str(self.sequence) + ": " + str(self.protein_name)
 
 class Experiment(models.Model):
     '''

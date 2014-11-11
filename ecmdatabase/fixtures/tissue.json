@@ -3,49 +3,28 @@
     "pk": 1,
     "model": "ecmdatabase.tissue",
     "fields": {
-      "name": "Bone"
+      "name": "Skin"
     }
   },
   {
     "pk": 2,
     "model": "ecmdatabase.tissue",
     "fields": {
-      "name": "Tendon"
+      "name": "Bone"
     }
   },
   {
     "pk": 3,
     "model": "ecmdatabase.tissue",
     "fields": {
-      "name": "Brain"
+      "name": "Muscle"
     }
   },
   {
     "pk": 4,
     "model": "ecmdatabase.tissue",
     "fields": {
-      "name": "Eye"
-    }
-  },
-  {
-    "pk": 5,
-    "model": "ecmdatabase.tissue",
-    "fields": {
-      "name": "Prostate"
-    }
-  },
-  {
-    "pk": 6,
-    "model": "ecmdatabase.tissue",
-    "fields": {
-      "name": "Liver"
-    }
-  },
-  {
-    "pk": 7,
-    "model": "ecmdatabase.tissue",
-    "fields": {
-      "name": "Lung"
+      "name": "Tendon"
     }
   }
 ]
