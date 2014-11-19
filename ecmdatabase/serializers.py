@@ -1,4 +1,5 @@
 from ecmdatabase.models import Tissue, Protein, Experiment, ProteinHit, VariableModification
+from atlas.serializers import TissueWeightNormSerializer
 from rest_framework import serializers
 
 
@@ -11,9 +12,10 @@ class TissueSerializer(serializers.ModelSerializer):
 
 
 class ProteinSerializer(serializers.ModelSerializer):
+    average_tissue_weight_norms = serializers.Field(source='get_average_tissue_weight_norms')
     class Meta:
         model = Protein
-        fields = ('id', 'sequence', 'gene_name', 'protein_name', 'species', 'tissues')
+        fields = ('id', 'sequence', 'gene_name', 'protein_name', 'species', 'tissues', 'average_tissue_weight_norms')
 
 class ExperimentSerializer(serializers.ModelSerializer):
     class Meta:

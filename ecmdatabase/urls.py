@@ -7,9 +7,9 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from ecmdatabase import views
 
 urlpatterns = patterns('',
-    url(r'^proteins/$', views.ProteinList.as_view()),
-    url(r'^proteins/(?P<pk>[0-9]+)/$', views.ProteinDetail.as_view()),
-    
+    url(r'^proteins/$', views.ProteinList.as_view(), name='protein-list'),
+    url(r'^proteins/(?P<pk>[0-9]+)/$', views.ProteinDetail.as_view(), name='protein-detail'),
+
     url(r'^tissues/$', views.TissueList.as_view()),
     url(r'^tissues/(?P<pk>[0-9]+)/$', views.TissueDetail.as_view()),
 
@@ -21,4 +21,4 @@ urlpatterns = patterns('',
 
     url(r'^variablemodifications/$', views.VariableModificationList.as_view()),
     url(r'^variablemodifications/(?P<pk>[0-9]+)/$', views.VariableModificationDetail.as_view()),
-) 
+)

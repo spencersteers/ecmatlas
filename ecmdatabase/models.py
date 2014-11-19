@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # TODO: Choices to CharField/Tables
 SPECIES_CHOICES = (
     ('HOMO SAPIENS','Homo Sapiens'),
@@ -73,6 +72,8 @@ class Tissue(models.Model):
     def __str__(self):
         return str(self.name)
 
+
+import math
 class Protein(models.Model):
     '''
     This is the proteins' common data among all experiments
@@ -85,6 +86,29 @@ class Protein(models.Model):
 
     def __str__(self):
         return str(self.sequence) + ": " + str(self.protein_name)
+
+    def get_average_tissue_weight_norms(self):
+
+        averages = dict()
+
+        all_average = 0
+        for t in self.tissues.all():
+            average = 0
+            # queryset = TissueWeightNorm.objects.all()
+            # queryset = queryset.filter(protein=self)
+            # queryset = queryset.filter(tissue=tissue)
+            norms = self.tissue_weight_norms.all().filter(tissue__name=t.name)
+            average = math.fsum(norm.value for norm in norms)
+
+            average = average / len(norms)
+            all_average = all_average + average
+            averages[t.name] = average
+
+        all_average = all_average / len(self.tissues.all())
+        averages['all'] = all_average
+        return averages
+
+
 
 class Experiment(models.Model):
     '''

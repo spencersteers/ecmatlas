@@ -5,7 +5,6 @@ class TissueWeightNorm(models.Model):
     '''
     Tissue weight norms from the dataset (per protein)
     '''
-    # dataset = models.ForeignKey(dataset class)
     protein = models.ForeignKey(Protein, related_name='tissue_weight_norms')
     tissue = models.ForeignKey(Tissue)
     value = models.FloatField()
