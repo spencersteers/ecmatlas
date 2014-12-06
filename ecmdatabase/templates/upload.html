@@ -1,0 +1,18 @@
+<form action="/datasets/upload/" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<ul>
+{{form.as_ul}}
+</ul>
+<input type="submit" name="submit" value="Upload File">
+</form>
+
+<hr>
+
+<ul>
+{% for dataset in datasets %}
+  <li>
+    {{dataset.data_file.url}}
+    <a href="{% url 'datasets-insert' dataset.id %}">Insert</a>
+  </li>
+{% endfor %}
+</ul>

@@ -13,12 +13,6 @@ urlpatterns = patterns('',
     url(r'^tissues/$', views.TissueList.as_view()),
     url(r'^tissues/(?P<pk>[0-9]+)/$', views.TissueDetail.as_view()),
 
-    url(r'^experiments/$', views.ExperimentList.as_view()),
-    url(r'^experiments/(?P<pk>[0-9]+)/$', views.ExperimentDetail.as_view()),
-
-    url(r'^proteinhits/$', views.ProteinHitList.as_view()),
-    url(r'^proteinhits/(?P<pk>[0-9]+)/$', views.ProteinHitDetail.as_view()),
-
-    url(r'^variablemodifications/$', views.VariableModificationList.as_view()),
-    url(r'^variablemodifications/(?P<pk>[0-9]+)/$', views.VariableModificationDetail.as_view()),
+    url(r'^datasets/insert/(?P<dataset_id>[0-9]+)$', views.dataset_insert, name="datasets-insert"),
+    url(r'^datasets/upload/$', views.dataset_upload),
 )

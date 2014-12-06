@@ -9,7 +9,6 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-
 import math
 
 @api_view(['GET',])

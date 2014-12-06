@@ -1,0 +1,63 @@
+PeptideSequence,Gene,MW,Protein,Functional,Family,Species,Isotope,Peptide.Note,TissueWeightNorm
+LQLLEDLER,LAMB1,197090,Laminin Beta-1,Basement Membrane,Glycoprotein,mouse/rat,light,S12,11.29872722
+LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,light,,3.931957074
+YALSNSIGPVR,NID1,137039,Nidogen-1,Basement Membrane,Glycoprotein,shared,light,S12,11.50210431
+YELGSGLAVLR,HSPG2*,375271,Perlecan(Endorepellin),Basement Membrane,Proteoglycan,shared,light,S1,4.51949089
+AHLPLDINFR,LAMA4,201819,Laminin alpha-4,Basement Membrane,Glycoprotein,shared,light,?,9.338579786
+HQTHGSLLR,HSPG2,375271,Perlecan,Basement Membrane,Proteoglycan,shared,light,,8.14964023
+LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,light,,3.761372414
+AHGQDLGTAGSCLR,COL4A1/5*,160613,Collagen alpha-1/5(IV) chain(Arresten/Core Protein),Basement Membrane,Collagen,shared,light,S12,73.49997616
+GLDGFQGPSGPR,COL4A2,161386,Collagen alpha-2(IV) chain,Basement Membrane,Collagen,shared,light,,47.30156763
+SAPFIECHGR,COL4A1/5*,160613,Collagen alpha-1/5(IV) chain(Arresten/Core Protein),Basement Membrane,Collagen,shared,light,S12M12,26.49707488
+DIDDLELTLAK,MYH*,222880,"Myosin(Myosin-3,4,6,7)",Cytoskeletal,Glycoprotein,shared,light,,42.23464236
+QLAEEDLAQQR,PLEC,533540,Plectin,Cytoskeletal,Cellular,shared,light,M2,7.140795606
+QLAEEDLAQQR,PLEC (pyroG),533540,Plectin,Cytoskeletal,Cellular,shared,light,M2,7.140795606
+AGFAGDDAPR,ACT,42051,Actin (All Isoforms),Cytoskeletal,Cellular,shared,light,,253.4966489
+FADLSEAANR,VIM,53733,Vimentin,Cytoskeletal,Cellular,shared,light,,67.20119621
+GYSFTTTAER,ACTB,41737,"Actin, cytoplasmic 1/2",Cytoskeletal,Cellular,shared,light,S12,255.6509395
+TSGGAGGLGSLR,DES,53457,Desmin,Cytoskeletal,Cellular,shared,light,,3.827033991
+YLTVAAVFR,TUBB*,49586,Tubulin beta-4B chain(4b & 5 chain),Cytoskeletal,Cellular,shared,light,S12T12,14.16762915
+GFSGLDGAK,COL1A1*,137953,Collagen alpha-1(I) chain(fragment),Fibrillar Collagen,Collagen,shared,light,,"5,532.308798"
+GPAGPQGPR,COL1A1,137953,Collagen alpha-1(I) chain,Fibrillar Collagen,Collagen,shared,light,,"13,190.87988"
+GDDGEVGPR,COL5A1,183987,Collagen alpha-1(V) chain,Fibrillar Collagen,Collagen,shared,light,S12B12,105.4836296
+GFPGADGVAGPK,COL1A1,137953,Collagen alpha-1(I) chain,Fibrillar Collagen,Collagen,shared,light,S12,553.8487992
+GPSGPQGIR,COL1A2,129564,Collagen alpha-2(I) chain,Fibrillar Collagen,Collagen,shared,light,,"9,889.747456"
+GSEGPQGVR,COL1A1,137953,Collagen alpha-1(I) chain,Fibrillar Collagen,Collagen,shared,light,,"18,995.27407"
+GVQGPPGPAGPR,COL1A1,137953,Collagen alpha-1(I) chain,Fibrillar Collagen,Collagen,shared,light,,846.2109932
+GVVGPQGAR,COL1A2,129564,Collagen alpha-2(I) chain,Fibrillar Collagen,Collagen,shared,light,,"8,424.805912"
+SLSQQIENIR,COL1A1*,137953,Collagen alpha-1(I) chain(C-term Propeptides (NC1 Domain)),Fibrillar Collagen,Collagen,shared,light,?,5.687608483
+VGAPGPAGAR,COL1A2,129564,Collagen alpha-2(I) chain,Fibrillar Collagen,Collagen,shared,light,S12M12T12,75.51614624
+GPEGPQGQR,COL5A2,145018,Collagen alpha-2(V) chain,Fibrillar Collagen,Collagen,shared,light,S12B12T12,85.9062872
+ALEFVAR,COL6A3,288133,Collagen alpha-3(VI) chain,Matricellular,Collagen,shared,light,,32.06578786
+IALVITDGR,COL6A1,108806,Collagen alpha-1(VI) chain,Matricellular,Collagen,shared,light,S1M1T12,109.2134974
+NFVINVVNR,COL6A2,108579,Collagen alpha-2(VI) chain,Matricellular,Collagen,human/mouse,light,,57.53311903
+VFAVVITDGR,COL6A2,108579,Collagen alpha-2(VI) chain,Matricellular,Collagen,shared,light,,77.78043821
+AAAITSDLLESLGR,POSTN,93155,Periostin,Matricellular,Glycoprotein,mouse/rat,light,S12B12T12,3.662294118
+DFPNLAFIR,PRELP,43179,Prolargin,Matricellular,Proteoglycan,mouse/rat,light,,13.41996357
+FTGLQYLR,LUM,38279,Lumican,Matricellular,Proteoglycan,mouse/rat,light,S12T12,163.8908298
+LDTVAGGLQGLR,EMILIN1,106667,Emilin 1,Matricellular,Glycoprotein,shared,light,,#N/A
+LSQNLISR,PRELP,43179,Prolargin,Matricellular,Proteoglycan,mouse/rat,light,S12B12T12,50.20764462
+FVFGTTPEDILR,THBS1,129647,Thrombospondin 1,Matricellular,Glycoprotein,shared,light,?,8.889875444
+VPQIAFVITGGK,COL6A3,288133,Collagen alpha-3(VI) chain,Matricellular,Collagen,shared,light,,246.7418386
+GFEPGVTNILK,POSTN,93155,Periostin,Matricellular,Glycoprotein,shared,light,B12,5.879846532
+ILGPLSYSK,LUM,38279,Lumican,Matricellular,Proteoglycan,shared,light,S12,204.0004108
+TIVTTLQDSIR,THBS1,129647,Thrombospondin 1,Matricellular,Glycoprotein,shared,light,B12,3.04800868
+VFSVAITPDHLEPR,COL6A1,108806,Collagen alpha-1(VI) chain,Matricellular,Collagen,shared,light,,22.30882949
+IIDGVPVEITEK,POSTN,93155,Periostin,Matricellular,Glycoprotein,shared,light,S12B12,7.582694047
+LENLLLLDLQHNR,PRELP,43179,Prolargin,Matricellular,Proteoglycan,shared,light,S12B12T12,81.36351072
+APTDIDSPK,TNN,173090,Tenascin-N,Matricellular,Glycoprotein,shared,light,M12,#N/A
+NNFPVLAANSFR,CHAD,40404,Chondroadherin,Matricellular,Proteoglycan,shared,light,M12,5.404165318
+NQLEEVPSALPR,PRELP,43179,Prolargin,Matricellular,Proteoglycan,shared,light,S12B12,77.37241094
+HLQLAIR,H2A*,14077,Histone 2A(H2A-A-K),Other Cellular,Cellular,shared,light,,492.2300706
+SGVSLAALK,H1*,20863,"Histone H1(H1.1,H1.2,H1.3,H1.4)",Other Cellular,Cellular,shared,light,,327.8977983
+VSVVDLTCR,GAPDH,35828,Glyceraldehyde-3-phosphate dehydrogenase,Other Cellular,Cellular,shared,light,S12B12M12,54.39074331
+GNPTVEVDLYTAK,ENO1/2,47128,Alpha/gamma-enolase,Other Cellular,Cellular,shared,light,S12?,120.5608233
+ESAYLYAR,OGN,34069,Mimecan/Osteoglycin,Other ECM,Proteoglycan,shared,light,S12,52.32391838
+GVDEVTIVNILTNR,ANXA2,38678,Annexin A2,Other ECM,ECM-affiliated,mouse/rat,light,,82.87682882
+LPVLPPK,OGN,34069,Mimecan/Osteoglycin,Other ECM,Proteoglycan,shared,light,,79.59822745
+SFVLNLGK,LGALS1,14857,Galectin-1,Other ECM,ECM-affiliated,shared,light,,90.27574839
+IQAIELEDLLR,BGN,41706,Biglycan,Structural ECM,Proteoglycan,shared,light,,10.96153776
+AGYQSTLTR,FBN1,311952,Fibrillin 1,Structural ECM,Glycoprotein,shared,light,S12,324.5521462
+VVQCSDLGLDK,DCN,39805,Decorin,Structural ECM,Proteoglycan,shared,light,S12B12,42.04522612
+CNEGYEVAPDGR,FBN1,311952,Fibrillin 1,Structural ECM,Glycoprotein,shared,light,S12,59.93939104
+LGLGHNQIR,BGN,41706,Biglycan,Structural ECM,Proteoglycan,shared,light,S12B12,34.18230332
