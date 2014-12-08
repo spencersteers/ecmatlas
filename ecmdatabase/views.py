@@ -1,5 +1,5 @@
 from ecmdatabase.models import Tissue, Family, FunctionalGroup, Protein, Dataset, DatasetItem
-from ecmdatabase.serializers import TissueSerializer, ProteinSerializer
+from ecmdatabase.serializers import TissueSerializer, ProteinSerializer, FamilySerializer, FunctionalGroupSerializer, DatasetSerializer, DatasetItemSerializer
 from ecmdatabase.forms import DatasetUploadForm
 
 from django.core.context_processors import csrf
@@ -14,8 +14,6 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-
-
 
 
 class ProteinList(generics.ListAPIView):
@@ -39,6 +37,50 @@ class TissueDetail(generics.RetrieveAPIView):
     queryset = Tissue.objects.all()
     serializer_class = TissueSerializer
 
+
+class FamilyList(generics.ListAPIView):
+    resource_name = 'family'
+    queryset = Family.objects.all()
+    serializer_class = FamilySerializer
+
+class FamilyDetail(generics.RetrieveAPIView):
+    resource_name = 'family'
+    queryset = Family.objects.all()
+    serializer_class = FamilySerializer
+
+
+class FunctionalGroupList(generics.ListAPIView):
+    resource_name = 'functional_group'
+    queryset = FunctionalGroup.objects.all()
+    serializer_class = FunctionalGroupSerializer
+
+class FunctionalGroupDetail(generics.RetrieveAPIView):
+    resource_name = 'functional_group'
+    queryset = FunctionalGroup.objects.all()
+    serializer_class = FunctionalGroupSerializer
+
+
+
+class DatasetList(generics.ListAPIView):
+    resource_name = 'dataset'
+    queryset = Dataset.objects.all()
+    serializer_class = DatasetSerializer
+
+class DatasetDetail(generics.RetrieveAPIView):
+    resource_name = 'dataset'
+    queryset = Dataset.objects.all()
+    serializer_class = DatasetSerializer
+
+
+class DatasetItemList(generics.ListAPIView):
+    resource_name = 'datasetitem'
+    queryset = DatasetItem.objects.all()
+    serializer_class = DatasetItemSerializer
+
+class DatasetItemDetail(generics.RetrieveAPIView):
+    resource_name = 'datasetitem'
+    queryset = DatasetItem.objects.all()
+    serializer_class = DatasetItemSerializer
 
 # class ExperimentList(generics.ListAPIView):
 #     resource_name = 'experiment'
@@ -73,7 +115,27 @@ class TissueDetail(generics.RetrieveAPIView):
 
 #
 
+from django.shortcuts import get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest
 from ecmdatabase.dataset_parser import parse_to_items
+import json
+import datetime
+
+
+
+@csrf_exempt
+def dataset_delete(request, dataset_id):
+    if request.method == 'GET' or request.method == 'POST':
+        dataset = get_object_or_404(Dataset, pk=dataset_id)
+        dataset.delete()
+        return HttpResponse(str(dataset_id))
+    else:
+        return HttpResponseBadRequest('Only POST accepted')
+
+
+
+@csrf_exempt
 def dataset_insert(request, dataset_id):
     dataset = Dataset.objects.get(pk=dataset_id)
 
@@ -114,21 +176,76 @@ def dataset_insert(request, dataset_id):
                             )
         dataset_item.save()
 
+    dataset.inserted_at = datetime.datetime.now()
     dataset.is_inserted = True
     dataset.save()
 
+    return HttpResponse(str(dataset.id))
 
+@csrf_exempt
 def dataset_upload(request):
-    if request.POST:
-        form = DatasetUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
+    if request.method == 'POST':
+        if request.FILES == None:
+            return HttpResponseBadRequest('Must have files attached!')
+
+        #getting file data for farther manipulations
+        file = request.FILES[u'files[]']
+        wrapped_file = UploadedFile(file)
+        filename = wrapped_file.name
+        file_size = wrapped_file.file.size
+
+        #writing file manually into model
+        #because we don't need form of any type.
+        dataset = Dataset()
+        dataset.name=str(filename)
+        dataset.data_file=file
+        dataset.save()
+
+        #getting url for photo deletion
+        file_delete_url = '/datasets/delete/'
+        file_insert_url = '/datasets/insert/'
+
+        #getting file url here
+        file_url = dataset.data_file.url
+
+        #getting thumbnail url using sorl-thumbnail
+
+        #generating json response array
+        result = {"files": []}
+        result["files"].append({"name":filename,
+                               "size":file_size,
+                               "url":file_url,
+                               "deleteUrl":file_delete_url+str(dataset.pk)+'/',
+                               "deleteType":"POST",
+                               "insertUrl":file_insert_url+str(dataset.pk)+'/',
+                            })
+        response_data = json.dumps(result)
+        return HttpResponse(response_data, content_type='application/json')
+
+
     else:
-        form = DatasetUploadForm()
+        return render_to_response('upload.html')
 
-    args = {}
-    args.update(csrf(request))
-    args['form'] = form
-    args['datasets'] = Dataset.objects.all()
+@csrf_exempt
+def dataset_uploadfiles(request):
+    datasets = Dataset.objects.all()
+    result = {"files": []}
+    for dataset in datasets:
 
-    return render_to_response('upload.html', args)
+        file_delete_url = '/datasets/delete/'
+        file_insert_url = '/datasets/insert/'
+
+        item = {
+            "name": dataset.name,
+            "url": dataset.data_file.url,
+            "deleteUrl": file_delete_url+str(dataset.pk)+'/',
+            "deleteType":"POST",
+        }
+        if not dataset.is_inserted:
+            item["insertUrl"] = file_insert_url+str(dataset.pk)+'/'
+
+
+        result["files"].append(item)
+
+    response_data = json.dumps(result)
+    return HttpResponse(response_data, content_type='application/json')

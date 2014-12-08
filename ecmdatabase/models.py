@@ -46,10 +46,10 @@ class Protein(models.Model):
             # queryset = TissueWeightNorm.objects.all()
             # queryset = queryset.filter(protein=self)
             # queryset = queryset.filter(tissue=tissue)
-            norms = self.tissue_weight_norms.all().filter(tissue__name=t.name)
-            average = math.fsum(norm.value for norm in norms)
+            items = self.dataset_items.all().filter(tissue=t)
+            average = math.fsum(i.tissue_weight_norm for i in items)
 
-            average = average / len(norms)
+            average = average / len(items)
             all_average = all_average + average
             averages[t.name] = average
 
@@ -67,13 +67,13 @@ class Dataset(models.Model):
         return str(self.name) + " (" + str(self.inserted_at) + ")"
 
 class DatasetItem(models.Model):
-    protein = models.ForeignKey(Protein)
+    protein = models.ForeignKey(Protein, related_name='dataset_items')
     tissue = models.ForeignKey(Tissue)
     functional_group = models.ForeignKey(FunctionalGroup)
     family = models.ForeignKey(Family)
     species = models.CharField(max_length=255)
 
-    dataset = models.ForeignKey(Dataset)
+    dataset = models.ForeignKey(Dataset, related_name='dataset_items')
 
     peptide_sequence = models.TextField()
     gene = models.CharField(max_length=255)

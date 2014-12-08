@@ -83,8 +83,15 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+
+CONTENT_TYPES = ['text/csv',]
+MAX_UPLOAD_SIZE = 20971520
+
+MEDIA_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/media/'
+MEDIA_URL = '/media/'
+
 # Static asset configuration
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (

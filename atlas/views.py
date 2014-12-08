@@ -17,7 +17,7 @@ def tissueweightnorm_average(request):
     List all snippets, or create a new snippet.
     """
     if request.method == 'GET':
-        queryset = TissueWeightNorm.objects.all()
+        queryset = DatasetItem.objects.all()
 
         protein = request.QUERY_PARAMS.get('protein', None)
         tissue = request.QUERY_PARAMS.get('tissue', None)
