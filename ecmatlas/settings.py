@@ -90,7 +90,7 @@ MEDIA_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/media/'
 MEDIA_URL = '/media/'
 
 # Static asset configuration
-STATIC_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/static/'
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
