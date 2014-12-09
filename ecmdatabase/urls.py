@@ -28,6 +28,5 @@ urlpatterns = patterns('',
     url(r'^datasets/insert/(?P<dataset_id>[0-9]+)/$', views.dataset_insert, name="datasets-insert"),
     url(r'^datasets/delete/(?P<dataset_id>[0-9]+)/$', views.dataset_delete, name="datasets-delete"),
     url(r'^datasets/upload/$', views.dataset_upload, name="datasets-upload"),
-    url(r'^datasets/files/$', views.dataset_uploadfiles, name="datasets-jqueryfiles"),
-
+    url(r'^datasets/files/$', views.dataset_uploadfiles, name="datasets-uploadfiles"),
 )

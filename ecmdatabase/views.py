@@ -82,47 +82,15 @@ class DatasetItemDetail(generics.RetrieveAPIView):
     queryset = DatasetItem.objects.all()
     serializer_class = DatasetItemSerializer
 
-# class ExperimentList(generics.ListAPIView):
-#     resource_name = 'experiment'
-#     queryset = Experiment.objects.all()
-#     serializer_class = ExperimentSerializer
 
-# class ExperimentDetail(generics.RetrieveAPIView):
-#     resource_name = 'experiment'
-#     queryset = Experiment.objects.all()
-#     serializer_class = ExperimentSerializer
-
-# class ProteinHitList(generics.ListAPIView):
-#     resource_name = 'protein_hit'
-#     queryset = ProteinHit.objects.all()
-#     serializer_class = ProteinHitSerializer
-
-# class ProteinHitDetail(generics.RetrieveAPIView):
-#     resource_name = 'protein_hit'
-#     queryset = ProteinHit.objects.all()
-#     serializer_class = ProteinHitSerializer
-
-
-# class VariableModificationList(generics.ListAPIView):
-#     resource_name = 'variable_modifications'
-#     queryset = VariableModification.objects.all()
-#     serializer_class = VariableModificationSerializer
-
-# class VariableModificationDetail(generics.RetrieveAPIView):
-#     resource_name = 'variable_modifications'
-#     queryset = VariableModification.objects.all()
-#     serializer_class = VariableModificationSerializer
-
-#
-
+# File uploads
 from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest
+from django.core.files.uploadedfile import UploadedFile
 from ecmdatabase.dataset_parser import parse_to_items
 import json
 import datetime
-
-
 
 @csrf_exempt
 def dataset_delete(request, dataset_id):

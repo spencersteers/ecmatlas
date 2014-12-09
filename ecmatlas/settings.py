@@ -50,7 +50,6 @@ INSTALLED_APPS += (
 # Custom
 INSTALLED_APPS += (
     'ecmdatabase',
-    'atlas',
 )
 
 MIDDLEWARE_CLASSES = (
