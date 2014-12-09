@@ -92,7 +92,10 @@ class FunctionalGroupDetail(generics.RetrieveAPIView):
 
 class DatasetList(generics.ListAPIView):
     resource_name = 'dataset'
-    queryset = Dataset.objects.all()
+    def get_queryset(self):
+        queryset = Dataset.objects.filter(is_inserted=True)
+        return queryset
+
     serializer_class = DatasetSerializer
 
 class DatasetDetail(generics.RetrieveAPIView):
@@ -225,7 +228,7 @@ def dataset_upload(request):
 
 @csrf_exempt
 def dataset_uploadfiles(request):
-    datasets = Dataset.objects.filter(is_inserted=True)
+    datasets = Dataset.objects.all()
     result = {"files": []}
     for dataset in datasets:
 
