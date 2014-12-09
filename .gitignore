@@ -75,5 +75,5 @@ ecmatlas_2015
 #
 ecmatlas/static/
 ecmatlas/media/
-static/
-staticfiles/
+/static/
+/staticfiles/

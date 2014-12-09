@@ -101,7 +101,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-
 # Django-Rest-Framework
 # http://www.django-rest-framework.org/api-guide/settings
 REST_FRAMEWORK = {
