@@ -1,5 +1,4 @@
 from ecmdatabase.models import Tissue, Family, FunctionalGroup, Protein, Dataset, DatasetItem
-from atlas.serializers import TissueWeightNormSerializer
 from rest_framework import serializers
 
 
