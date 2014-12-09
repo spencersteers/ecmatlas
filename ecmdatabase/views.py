@@ -9,7 +9,7 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.parsers import FileUploadParser
 from rest_framework import filters
-import django_filters
+# import django_filters
 from urllib.parse import urlparse, urlencode
 
 
@@ -18,13 +18,13 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-class ProteinFilter(django_filters.FilterSet):
-    #new_gene_name = django_filters.CharFilter(name="gene_name")
-    new_gene_name = django_filters.CharFilter(name="gene_name",lookup_type="contains")
-    class Meta:
-        model = Protein
-        #fields = ['gene_name']
-        fields = ['new_gene_name']
+# class ProteinFilter(django_filters.FilterSet):
+#     #new_gene_name = django_filters.CharFilter(name="gene_name")
+#     new_gene_name = django_filters.CharFilter(name="gene_name",lookup_type="contains")
+#     class Meta:
+#         model = Protein
+#         #fields = ['gene_name']
+#         fields = ['new_gene_name']
 
 class ProteinList(generics.ListAPIView):
     resource_name = 'protein'
@@ -225,7 +225,7 @@ def dataset_upload(request):
 
 @csrf_exempt
 def dataset_uploadfiles(request):
-    datasets = Dataset.objects.all()
+    datasets = Dataset.objects.filter(is_inserted=True)
     result = {"files": []}
     for dataset in datasets:
 
