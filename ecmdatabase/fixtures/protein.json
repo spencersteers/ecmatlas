@@ -3,90 +3,66 @@
     "pk": 1,
     "model": "ecmdatabase.protein",
     "fields": {
-      "gene_name": "Myh6",
-      "name": "10090",
-      "sequence": null,
-      "long_gene_name": "Myh6 Myosin",
-      "isoelectric_point": null,
-      "prot_acc": "IPI00129404",
-      "length": 1938,
-      "taxidermy_id": null,
-      "validated": true,
-      "species": "RATTUS",
-      "taxidermy_string": null,
-      "tissue": 1
+      "sequence": "HQTHGSLLR",
+      "gene_name": "HSPG2",
+      "protein_name": "Perlecan",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
     }
   },
   {
     "pk": 2,
     "model": "ecmdatabase.protein",
     "fields": {
-      "gene_name": "Myh7",
-      "name": "10090",
-      "sequence": null,
-      "long_gene_name": "Myh7 Myosin",
-      "isoelectric_point": null,
-      "prot_acc": "IPI00130653",
-      "length": 1935,
-      "taxidermy_id": null,
-      "validated": true,
-      "species": "RATTUS",
-      "taxidermy_string": null,
-      "tissue": 1
+      "sequence": "SIGLWNYIER",
+      "gene_name": "LAMA1",
+      "protein_name": "Laminin",
+      "species": "shared",
+      "tissues": [3, 2]
     }
   },
   {
     "pk": 3,
     "model": "ecmdatabase.protein",
     "fields": {
-      "gene_name": "Hbb",
-      "name": "10090",
-      "sequence": null,
-      "long_gene_name": "Hbb",
-      "isoelectric_point": null,
-      "prot_acc": "IPI00988950",
-      "length": 147,
-      "taxidermy_id": null,
-      "validated": true,
-      "species": "RATTUS",
-      "taxidermy_string": null,
-      "tissue": 1
+      "sequence": "QLAEEDLAQQR",
+      "gene_name": "PLEC",
+      "protein_name": "Plectin",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
     }
   },
   {
     "pk": 4,
     "model": "ecmdatabase.protein",
     "fields": {
-      "gene_name": "Atp5b",
-      "name": "10090",
-      "sequence": null,
-      "long_gene_name": "Atp5b ATP synthase subunit beta",
-      "isoelectric_point": null,
-      "prot_acc": "IPI00468481",
-      "length": 529,
-      "taxidermy_id": null,
-      "validated": true,
-      "species": "HOMO SAPIENS",
-      "taxidermy_string": null,
-      "tissue": 2
+      "sequence": "TSGGAGGLGSLR",
+      "gene_name": "DES",
+      "protein_name": "Desmin",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
     }
   },
   {
     "pk": 5,
     "model": "ecmdatabase.protein",
     "fields": {
-      "gene_name": "Hba",
-      "name": "10090",
-      "sequence": null,
-      "long_gene_name": "Hba",
-      "isoelectric_point": null,
-      "prot_acc": "IPI00845802",
-      "length": 142,
-      "taxidermy_id": null,
-      "validated": true,
-      "species": "HOMO SAPIENS",
-      "taxidermy_string": null,
-      "tissue": 3
+      "sequence": "NFVINVVNR",
+      "gene_name": "COL6A2",
+      "protein_name": "Collagen alpha-2(VI) chain",
+      "species": "mouse",
+      "tissues": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 6,
+    "model": "ecmdatabase.protein",
+    "fields": {
+      "sequence": "LGLGHNQIR",
+      "gene_name": "BGN",
+      "protein_name": "Biglycan",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
     }
   }
 ]
