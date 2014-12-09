@@ -49,7 +49,11 @@ class Protein(models.Model):
             items = self.dataset_items.all().filter(tissue=t)
             average = math.fsum(i.tissue_weight_norm for i in items)
 
-            average = average / len(items)
+            if len(items) < 1:
+                average = 0
+            else:
+                average = average / len(items)
+
             all_average = all_average + average
             averages[t.name] = average
 
