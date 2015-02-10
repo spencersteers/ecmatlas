@@ -103,14 +103,16 @@ STATICFILES_FINDERS = (
 
 # Django-Rest-Framework
 # http://www.django-rest-framework.org/api-guide/settings
+REST_EMBER_FORMAT_KEYS = True
+REST_EMBER_PLURALIZE_KEYS = True
 REST_FRAMEWORK = {
     'PAGINATE_BY': 10,
     'PAGINATE_BY_PARAM': 'page_size',
     'MAX_PAGINATE_BY': 100,
     'DEFAULT_PAGINATION_SERIALIZER_CLASS':
-        'rest_framework_ember.pagination.EmberPaginationSerializer',
+        'rest_framework_ember.pagination.PaginationSerializer',
     'DEFAULT_PARSER_CLASSES': (
-        'rest_framework_ember.parsers.EmberJSONParser',
+        'rest_framework_ember.parsers.JSONParser',
         'rest_framework.parsers.FormParser',
         'rest_framework.parsers.MultiPartParser'
     ),

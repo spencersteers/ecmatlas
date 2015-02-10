@@ -1,1 +1,1 @@
-web: gunicorn ecmatlas.wsgi --log-file -
+web: gunicorn --reload ecmatlas.wsgi --log-file -
