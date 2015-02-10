@@ -23,7 +23,7 @@ class FunctionalGroupSerializer(serializers.ModelSerializer):
         fields = ('id', 'name')
 
 class ProteinSerializer(serializers.ModelSerializer):
-    average_tissue_weight_norms = serializers.ReadOnlyField()
+    average_tissue_weight_norms = serializers.DictField(source='get_average_tissue_weight_norms')
     family_name = serializers.ReadOnlyField(source='family.name')
     functional_group_name = serializers.ReadOnlyField(source='functional_group.name')
     class Meta:
