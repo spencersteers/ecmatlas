@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'ecmatlas.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 import dj_database_url
 DATABASES = {}
-DATABASES['default'] =  dj_database_url.config(default='postgres://localhost/ecmatlas_2015')
+DATABASES['default'] =  dj_database_url.config()
 
 # Heroku
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
