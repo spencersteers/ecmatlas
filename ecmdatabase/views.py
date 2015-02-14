@@ -137,6 +137,11 @@ def dataset_delete(request, dataset_id):
 
 @csrf_exempt
 def dataset_insert(request, dataset_id):
+    '''
+    After dataset is uploaded and inserted into the database
+    the items are parsed from the csv and items are inserted into
+    the database.
+    '''
     dataset = Dataset.objects.get(pk=dataset_id)
 
     file_name = dataset.data_file.path
@@ -184,6 +189,9 @@ def dataset_insert(request, dataset_id):
 
 @csrf_exempt
 def dataset_upload(request):
+    '''
+    Uploads a file and inserts a dataset entry into the database
+    '''
     if request.method == 'POST':
         if request.FILES == None:
             return HttpResponseBadRequest('Must have files attached!')
@@ -228,6 +236,12 @@ def dataset_upload(request):
 
 @csrf_exempt
 def dataset_uploadfiles(request):
+    '''
+    List of all datasets in the database.
+    This is where insert and delete links are generated to be rendered
+    on the data loader page. To display to display additional fields or links
+    add them to the `item`
+    '''
     datasets = Dataset.objects.all()
     result = {"files": []}
     for dataset in datasets:
