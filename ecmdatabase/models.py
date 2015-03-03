@@ -1,4 +1,6 @@
 from django.db import models
+from pprint import pprint
+import requests, json
 
 # END_TODO
 
@@ -23,6 +25,7 @@ class FunctionalGroup(models.Model):
 
 import math
 class Protein(models.Model):
+
     '''
     This is the proteins' common data among all experiments
     '''
@@ -35,6 +38,29 @@ class Protein(models.Model):
     functional_group         = models.ForeignKey(FunctionalGroup, null=True)
     def __str__(self):
         return str(self.sequence) + ": " + str(self.protein_name)
+
+    def get_uniprot(self):
+        
+        request_params = { 'action': 'query', 'titles': str(self.gene_name), 'prop': 'extracts', 'exintro': '', 'redirects': '', 'format': 'json'}
+        uni_response = requests.get('http://www.uniprot.org/uniprot/?query=gene:'+str(self.gene_name)+'&format=tab')
+
+
+        my_lines = str(uni_response.text).split('\n')
+
+        uni_id = my_lines[1].split('\t')
+
+        return uni_id[0]
+
+    def get_wikipedia(self):
+    
+        search_title = self.gene_name
+
+        request_params = { 'action': 'query', 'titles': search_title, 'prop': 'extracts', 'exintro': '', 'redirects': '', 'format': 'json'}
+        r = requests.get('http://en.wikipedia.org/w/api.php', params=request_params)
+
+        json_response = r.json()
+        #pprint(json_response)
+        return json_response
 
     def get_average_tissue_weight_norms(self):
 
@@ -60,6 +86,8 @@ class Protein(models.Model):
         all_average = all_average / len(self.tissues.all())
         averages['all'] = all_average
         return averages
+
+
 
 class Dataset(models.Model):
     name = models.CharField(max_length=255, null=True)
