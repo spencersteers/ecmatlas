@@ -1,0 +1,30 @@
+[
+  {
+    "pk": 1,
+    "model": "atlas.tissue",
+    "fields": {
+      "name": "Skin"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "atlas.tissue",
+    "fields": {
+      "name": "Bone"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "atlas.tissue",
+    "fields": {
+      "name": "Muscle"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "atlas.tissue",
+    "fields": {
+      "name": "Tendon"
+    }
+  }
+]

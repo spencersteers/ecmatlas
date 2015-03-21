@@ -1,0 +1,68 @@
+[
+  {
+    "pk": 1,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "HQTHGSLLR",
+      "gene_name": "HSPG2",
+      "protein_name": "Perlecan",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 2,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "SIGLWNYIER",
+      "gene_name": "LAMA1",
+      "protein_name": "Laminin",
+      "species": "shared",
+      "tissues": [3, 2]
+    }
+  },
+  {
+    "pk": 3,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "QLAEEDLAQQR",
+      "gene_name": "PLEC",
+      "protein_name": "Plectin",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 4,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "TSGGAGGLGSLR",
+      "gene_name": "DES",
+      "protein_name": "Desmin",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 5,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "NFVINVVNR",
+      "gene_name": "COL6A2",
+      "protein_name": "Collagen alpha-2(VI) chain",
+      "species": "mouse",
+      "tissues": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 6,
+    "model": "atlas.protein",
+    "fields": {
+      "sequence": "LGLGHNQIR",
+      "gene_name": "BGN",
+      "protein_name": "Biglycan",
+      "species": "shared",
+      "tissues": [1, 2, 3, 4]
+    }
+  }
+]

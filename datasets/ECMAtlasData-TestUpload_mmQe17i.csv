@@ -1,7 +1,0 @@
-Sequence,Gene,MW,Protein,Functional,Family,Species,Tissue,Note,TissueWeightNorm
-LQLLEDLER,LAMB1,197090,Laminin Beta-1,Basement Membrane,Glycoprotein,mouse/rat,Skin,S12,11.29872722
-LQLLEDLER,LAMB1,197090,Laminin Beta-1,Basement Membrane,Glycoprotein,mouse/rat,Skin,S12,11.50161513
-LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,Skin,,3.931957074
-LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,Bone,,6.490611732
-LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,Skin,,4.520182077
-LSAEDLVLEGAGLR,LAMC1,177387,Laminin Gamma-1,Basement Membrane,Glycoprotein,shared,Bone,,6.352088853
