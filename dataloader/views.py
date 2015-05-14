@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 from experiments.models import Dataset, DatasetItem
 from atlas.models import Tissue, Family, FunctionalGroup, Protein
 from dataloader.forms import DatasetUploadForm
-from dataloader.helpers import parse_to_items
+from dataloader.tasks import parse_dataset
 
 
 @csrf_exempt
@@ -20,6 +20,7 @@ def dataset_delete(request, dataset_id):
     if request.method == 'GET' or request.method == 'POST':
         dataset = get_object_or_404(Dataset, pk=dataset_id)
         dataset.delete()
+
         return HttpResponse(str(dataset_id))
     else:
         return HttpResponseBadRequest('Only POST accepted')
@@ -27,48 +28,52 @@ def dataset_delete(request, dataset_id):
 
 @csrf_exempt
 def dataset_insert(request, dataset_id):
-    '''
-    After dataset is uploaded and inserted into the database
-    the items are parsed from the csv and items are inserted into
-    the database.
-    '''
-    dataset = Dataset.objects.get(pk=dataset_id)
-    file_name = dataset.data_file.path
-    dataset_items = parse_to_items(file_name)
+    parse_dataset.delay(dataset_id)
 
-    for item in dataset_items:
+    return HttpResponse(str(dataset_id))
 
-        family, is_new_family = Family.objects.get_or_create(name=item['family_name'])
-        functional_group, is_new_fg = FunctionalGroup.objects.get_or_create(name=item['functional_group_name'])
+    # '''
+    # After dataset is uploaded and inserted into the database
+    # the items are parsed from the csv and items are inserted into
+    # the database.
+    # '''
+    # dataset = Dataset.objects.get(pk=dataset_id)
+    # file_name = dataset.data_file.path
+    # dataset_items = parse_to_items(file_name)
 
-        protein, is_new_protein = Protein.objects.get_or_create(
-                                        sequence=item['sequence'],
-                                        gene_name=item['gene_name'],
-                                        protein_name=item['protein_name'],
-                                        species=item['species_name'],
-                                        family=family,
-                                        functional_group=functional_group
-                                   )
+    # for item in dataset_items:
 
-        tissue, is_new_tissue = Tissue.objects.get_or_create(name=item['tissue_name'])
-        protein.tissues.add(tissue)
-        protein.save()
+    #     family, is_new_family = Family.objects.get_or_create(name=item['family_name'])
+    #     functional_group, is_new_fg = FunctionalGroup.objects.get_or_create(name=item['functional_group_name'])
+
+    #     protein, is_new_protein = Protein.objects.get_or_create(
+    #                                     sequence=item['sequence'],
+    #                                     gene_name=item['gene_name'],
+    #                                     protein_name=item['protein_name'],
+    #                                     species=item['species_name'],
+    #                                     family=family,
+    #                                     functional_group=functional_group
+    #                                )
+
+    #     tissue, is_new_tissue = Tissue.objects.get_or_create(name=item['tissue_name'])
+    #     protein.tissues.add(tissue)
+    #     protein.save()
 
 
-        dataset_item = DatasetItem(protein=protein, gene=item['gene_name'],
-                                   tissue=tissue, functional_group=functional_group,
-                                   family=family, species=item['species_name'],
-                                   dataset=dataset, peptide_sequence=item['sequence'],
-                                   molecular_weight=item['molecular_weight'],
-                                   tissue_weight_norm=item['tissue_weight_norm']
-                       )
-        dataset_item.save()
+    #     dataset_item = DatasetItem(protein=protein, gene=item['gene_name'],
+    #                                tissue=tissue, functional_group=functional_group,
+    #                                family=family, species=item['species_name'],
+    #                                dataset=dataset, peptide_sequence=item['sequence'],
+    #                                molecular_weight=item['molecular_weight'],
+    #                                tissue_weight_norm=item['tissue_weight_norm']
+    #                    )
+    #     dataset_item.save()
 
-    dataset.inserted_at = datetime.datetime.now()
-    dataset.is_inserted = True
-    dataset.save()
+    # dataset.inserted_at = datetime.datetime.now()
+    # dataset.is_inserted = True
+    # dataset.save()
 
-    return HttpResponse(str(dataset.id))
+    # return HttpResponse(str(dataset.id))
 
 
 @csrf_exempt

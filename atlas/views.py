@@ -5,7 +5,11 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.parsers import FileUploadParser
 from rest_framework import filters
+from rest_framework.response import Response
 
+from rest_framework_extensions.cache.decorators import (
+    cache_response
+)
 
 class MultipleFieldLookupMixin(object):
     """
@@ -21,25 +25,61 @@ class MultipleFieldLookupMixin(object):
             filter[field] = self.kwargs[field]
         return get_object_or_404(queryset, **filter)  # Lookup the object
 
+class Proteins(APIView):
 
-class ProteinList(generics.ListAPIView):
-
-    resource_name = 'protein'
-    serializer_class = ProteinSerializer
-
-    def get_queryset(self):
-
+    @cache_response(60 * 15)
+    def get(self, request, format=None):
+    
         queryset = Protein.objects.all()
-        gene_query = self.request.QUERY_PARAMS.get('gene_name', None)
-        prot_query = self.request.QUERY_PARAMS.get('prot_acc', None)
+        gene_query = request.QUERY_PARAMS.get('gene_name', None)
+        prot_query = request.QUERY_PARAMS.get('prot_acc', None)
+        tissue_query = request.QUERY_PARAMS.get('tissue', None)
+        tissue_name_query = request.QUERY_PARAMS.get('tissue_name', None)
 
         if gene_query is not None:
-            queryset = queryset.filter(gene_name__startswith= gene_query)
+            queryset = queryset.filter(gene_name__startswith=gene_query)
 
         if prot_query is not None:
-            queryset = queryset.filter(prot_acc__startswith= prot_query)
+            queryset = queryset.filter(prot_acc__startswith=prot_query)
 
-        return queryset
+        if tissue_query is not None:
+            queryset = queryset.filter(tissues__pk=tissue_query)
+
+        if tissue_name_query is not None:
+            queryset = queryset.filter(tissues__name=tissue_name_query)
+
+        serializer = ProteinSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+
+# class ProteinList(generics.ListAPIView):
+
+#     resource_name = 'protein'
+#     serializer_class = ProteinSerializer
+
+    
+#     def get_queryset(self):
+
+#         queryset = Protein.objects.all()
+#         gene_query = self.request.QUERY_PARAMS.get('gene_name', None)
+#         prot_query = self.request.QUERY_PARAMS.get('prot_acc', None)
+#         tissue_query = self.request.QUERY_PARAMS.get('tissue', None)
+#         tissue_name_query = self.request.QUERY_PARAMS.get('tissue_name', None)
+
+#         if gene_query is not None:
+#             queryset = queryset.filter(gene_name__startswith=gene_query)
+
+#         if prot_query is not None:
+#             queryset = queryset.filter(prot_acc__startswith=prot_query)
+
+#         if tissue_query is not None:
+#             queryset = queryset.filter(tissues__pk=tissue_query)
+
+#         if tissue_name_query is not None:
+#             queryset = queryset.filter(tissues__name=tissue_name_query)
+
+#         return queryset
 
 
 class ProteinDetail(generics.RetrieveAPIView):

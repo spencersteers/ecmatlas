@@ -9,7 +9,7 @@ from atlas import views
 
 
 urlpatterns = patterns('',
-    url(r'^proteins/$', views.ProteinList.as_view(), name='protein-list'),
+    url(r'^proteins/$', views.Proteins.as_view(), name='protein-list'),
     url(r'^proteins/(?P<pk>[0-9]+)/$', views.ProteinDetail.as_view(), name='protein-detail'),
 
     url(r'^tissues/$', views.TissueList.as_view()),

@@ -12,5 +12,4 @@ urlpatterns = patterns('',
     url(r'^dataloader/datasets/delete/(?P<dataset_id>[0-9]+)/$', views.dataset_delete, name="datasets-delete"),
     url(r'^dataloader/datasets/upload/$', views.dataset_upload, name="datasets-upload"),
     url(r'^dataloader/datasets/files/$', views.dataset_uploadfiles, name="datasets-uploadfiles"),
-    url(r'^dataloader/$', views.dataloader, name="dataloader"),
 )

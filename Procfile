@@ -1,1 +1,2 @@
-web: gunicorn -b 127.0.0.1:5000 --reload ecmatlas.wsgi --log-file -
+web: gunicorn -b 127.0.0.1:5000 --reload ecmatlas.wsgi --log-level error --log-file ecmatlas.log --access-logfile ecmatlas.log --error-logfile ecmatlas.log
+worker: celery -A ecmatlas worker --loglevel=error --logfile=ecmatlas.log
