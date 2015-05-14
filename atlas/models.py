@@ -96,6 +96,11 @@ class ProteinExternalReference(models.Model):
         try:
             wikipedia_id = list(wikipedia_json.keys())[0]
             if int(wikipedia_id) > 0:
+                categories = wikipedia_json[wikipedia_id]['categories']
+                for cat in categories:
+                    pprint.pprint(cat)
+                    if 'disambiguation' in cat['title'].lower():
+                        raise Exception('disambiguation page')
                 reference.wikipedia_id = wikipedia_id
                 reference.wikipedia_summary = wikipedia_json[wikipedia_id]['extract']
                 reference.wikipedia_url = 'http://en.wikipedia.org/?curid={}'.format(wikipedia_id)
@@ -117,7 +122,7 @@ class ProteinExternalReference(models.Model):
     @classmethod
     def get_wikipedia_for_gene(cls, gene_name):
         search_title = gene_name
-        request_params = { 'action': 'query', 'titles': search_title, 'prop': 'extracts', 'exintro': '', 'redirects': '', 'format': 'json'}
+        request_params = { 'action': 'query', 'titles': search_title, 'prop': 'categories|extracts', 'exintro': '', 'redirects': '', 'format': 'json'}
         r = requests.get('http://en.wikipedia.org/w/api.php', params=request_params)
         json_response = r.json()['query']['pages']
         return json_response
