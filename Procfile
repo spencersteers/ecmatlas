@@ -1,2 +1,2 @@
 web: gunicorn ecmatlas.wsgi --log-file -
-worker: celery -A ecmatlas worker
+worker: celery worker --app=ecmatlas
