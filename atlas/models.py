@@ -98,7 +98,6 @@ class ProteinExternalReference(models.Model):
             if int(wikipedia_id) > 0:
                 categories = wikipedia_json[wikipedia_id]['categories']
                 for cat in categories:
-                    pprint.pprint(cat)
                     if 'disambiguation' in cat['title'].lower():
                         raise Exception('disambiguation page')
                 reference.wikipedia_id = wikipedia_id
