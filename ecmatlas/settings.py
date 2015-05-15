@@ -106,6 +106,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+LOGIN_URL = '/admin/login/'
+
 # Redis cache backend
 # https://devcenter.heroku.com/articles/heroku-redis
 from urllib.parse import urlparse

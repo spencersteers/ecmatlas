@@ -14,8 +14,10 @@ from atlas.models import Tissue, Family, FunctionalGroup, Protein
 from dataloader.forms import DatasetUploadForm
 from dataloader.tasks import parse_dataset
 
+from django.contrib.auth.decorators import login_required
 
 @csrf_exempt
+@login_required()
 def dataset_delete(request, dataset_id):
     if request.method == 'GET' or request.method == 'POST':
         dataset = get_object_or_404(Dataset, pk=dataset_id)
@@ -27,6 +29,7 @@ def dataset_delete(request, dataset_id):
 
 
 @csrf_exempt
+@login_required()
 def dataset_insert(request, dataset_id):
     parse_dataset.delay(dataset_id)
 
@@ -77,6 +80,7 @@ def dataset_insert(request, dataset_id):
 
 
 @csrf_exempt
+@login_required()
 def dataset_upload(request):
     '''
     Uploads a file and inserts a dataset entry into the database
@@ -123,6 +127,7 @@ def dataset_upload(request):
 
 
 @csrf_exempt
+@login_required()
 def dataset_uploadfiles(request):
     '''
     List of all datasets in the database.
@@ -156,6 +161,7 @@ def dataset_uploadfiles(request):
 
 
 @csrf_exempt
+@login_required()
 def dataloader(request):
     '''
     Backbone dataloader

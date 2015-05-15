@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^proteins/$', views.Proteins.as_view(), name='protein-list'),
     url(r'^proteins/(?P<pk>[0-9]+)/$', views.ProteinDetail.as_view(), name='protein-detail'),
 
-    url(r'^tissues/$', views.TissueList.as_view()),
+    url(r'^tissues/$', views.Tissues.as_view()),
     # url(r'^tissues/all/$', views.TissueList.as_view()),
     url(r'^tissues/(?P<pk>[0-9]+)/$', views.TissueDetail.as_view()),
     # url(r'^tissues/(?P<slug>[\w-]+)/$', views.TissueDetail.as_view()),
